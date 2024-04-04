@@ -1,0 +1,80 @@
+.famePeopleWithTypes{
+
+    
+    width: 75%;
+    /* margin: 1rem 0; */
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+    display: flex;
+    /* gap: 2rem; */
+    justify-content:center  ;
+    align-items: flex-start;
+
+}
+
+
+
+.famePeopleWithTypes .content {
+    width: 80%;
+    height: 100%;
+    padding: 1rem .5rem;
+    background-color: rgba(0, 206, 203, 0.02);
+    /* border-radius: 1rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.famePeopleWithTypes .SideBar {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.titleContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 1.5rem;
+}
+.titleWrapper{
+    width: 30%;
+    padding: .3rem 0;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+.titleWrapper .title{
+    color: white;
+    font-family: monospace;
+} 
+.fmaePeopleList{
+    
+    width: 95%;
+    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* -----------------------------------------Media Query----------------------------------------- */
+
+@media screen and (max-width : 630px) {
+
+.SideBar{
+    display: none;
+}    
+    
+}

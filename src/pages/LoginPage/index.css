@@ -1,0 +1,185 @@
+.loginPage{
+
+    width: 100%;
+    /* height: 100%; */
+    margin: 2rem 0;
+    background-color: black;
+    color: white;
+    /* font-size: 10rem; */
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.loginFormContainer{
+
+    
+    width: 35%;
+    height: 500px;
+    padding: 1rem .1rem ;
+    background-color: black;
+    border: 1px solid rgba(0, 206, 203, 0.3);
+    color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    
+    
+}
+
+.loginTitleWrapper{
+    
+    height: min-content;
+    width: 100%;
+    /* border-bottom: 1.5px solid white; */
+    font-size: 2rem;
+    padding: .3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loginTitle{
+    color: rgba(99, 110, 114,.3);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+}
+
+/* .description{
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+
+
+.loginFormContainer .form{
+
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    
+}
+
+.loginFormContainer .form li {
+
+    width: 90%;
+    list-style: none;
+}
+
+.loginFormContainer .form .loginFormButtons{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+
+.loginFormButtons{
+
+    width: 100%;
+    align-items: center;
+
+}
+
+    
+.loginFormButtons button {
+    width: 275px;
+    border-radius: .5rem;
+    margin-top: 1rem;
+}
+
+.loginFormButtons :not(:first-child):not(:last-child){
+    background-color: rgba(0, 206, 203, 0.3);
+}
+
+
+.loginFormButtons :not(:first-child):not(:last-child):hover {
+    background-color: rgba(99, 110, 114,.3);
+}
+
+.loginFormButtons :last-child button {
+    background-color: rgba(99, 110, 114,.3);
+}
+
+
+.forgotPassWrapper{
+    width: 90%;
+    font-size: 1rem;    
+    text-decoration: underline;
+    margin-top: .5rem;
+    margin-bottom: 1.7rem;
+
+}
+
+/* -------------------------------------Media Query-------------------------------------- */
+
+@media screen and (max-width : 855px) {
+ 
+    .loginFormContainer{
+        width: 50%;
+    }
+    
+}
+
+
+@media screen and (max-width : 680px) {
+ 
+     .loginFormContainer{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width : 570px) {
+ 
+     .loginFormContainer{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width : 480px) {
+ 
+     .loginFormContainer{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 425px) {
+ 
+     .loginFormContainer{
+        width: 80%;
+    }
+
+    .loginFormButtons{
+        scale: .85;
+    } 
+
+    .forgotPassWrapper{
+        width: 100%;
+    }
+
+    .loginTitleWrapper{
+        scale: .85;
+    }
+
+    .loginFormContainer .form li {
+        width: 100%;
+        scale: .9;
+    }
+     
+}

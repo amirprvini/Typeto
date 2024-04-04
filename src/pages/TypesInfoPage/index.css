@@ -1,0 +1,136 @@
+.typesInfoPage{
+   width: 100%;
+   display: flex;
+   justify-content: center; 
+}
+
+.typesInfoPage .content {
+
+    width: 80%;
+    padding: .5rem 1rem;
+    background-color: rgba(0, 206, 203, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+
+}
+
+.typesInfoPage .titleWrapper {
+
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+ 
+}
+
+
+.subTitle{
+    font-size: 1.5rem;
+}
+
+.subTitleWrapper{
+    margin-bottom: 1rem;
+}
+
+.typesInfoPage .content1Wrapper{
+    width: 100%;
+}
+
+.typesInfoPage .content1Wrapper .content1{
+    width: 100%;
+}
+
+
+.typesInfoPage .section1Wrapper{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.typesInfoPage .section1{
+    margin-top: 3rem;
+    width: 80%;
+    background-color: black;
+    border: 1px solid rgba(0, 206, 203, 0.627);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.sectionTitle{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    
+}
+
+.section1 .section1Content1{
+    /* font-size: 1.2rem; */
+    font-weight: normal;
+}
+
+.section1 .tagsWrapper{
+    width: 100%;
+    display: flex;
+    margin: 1.5rem 0;
+}
+
+.section1 .tagsWrapper .tagsList{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+.typesInfoPage .section2Wrapper{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.typesInfoPage .section2{
+    margin-top: 3rem;
+    width: 80%;
+    background-color: black;
+    border: 1px solid rgba(0, 206, 203, 0.627);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.typesInfoPage .section3Wrapper{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.typesInfoPage .section3{
+    margin-top: 3rem;
+    width: 80%;
+    background-color: black;
+    border: 1px solid rgba(0, 206, 203, 0.627);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.famePeopleWrapper{
+    width: 100%;
+}
+
+.famePeopleWrapper .famePeopleList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    justify-content: center;
+}

@@ -1,0 +1,202 @@
+{
+  "artists": [
+    {
+      "name": "Mehrad Hidden",
+      "career": "Musician",
+      "type": "ISTP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/21ca6867612a47749b23dc1e1038a906.png",
+      "bioGraphy": "مهراد مستوفی راد ملقب به مهراد هیددن یکی از برترین آرتیست های رپ فارسی به شمار می رود که کار خود را در لندن به همراه سهراب و سامان آغاز کرد.",
+      "id": "1",
+      "comments": []
+    },
+    {
+      "name": "Mehran modiri",
+      "career": "Musician",
+      "type": "ISTP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/21ca6867612a47749b23dc1e1038a906.png",
+      "bioGraphy": "مهراد مستوفی راد ملقب به مهراد هیددن یکی از برترین آرتیست های رپ فارسی به شمار می رود که کار خود را در لندن به همراه سهراب و سامان آغاز کرد.",
+      "id": "2",
+      "comments": []
+    },
+    {
+      "name": "Mia Plays",
+      "career": "Musician",
+      "type": "ISTP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/c157110dea804f1baac0da4497ef2982.png",
+      "comments": [
+        {
+          "id": 1711828444460,
+          "commentText": "",
+          "artistId": "3",
+          "user": {
+            "id": "1711828003406",
+            "phoneNumber": "09374898048",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "",
+            "email": "",
+            "isAuthenticated": true,
+            "mbtiType": ""
+          },
+          "likeCounter": 0,
+          "disLikeCounter": 0
+        }
+      ],
+      "id": "3"
+    },
+    {
+      "name": "Amir Tataloo",
+      "career": "Musician",
+      "type": "ISTP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/adc42bddc37640fb9f3daab6dbf98a1d.png",
+      "comments": [
+        {
+          "id": 1711828092681,
+          "commentText": "soltaaaaan",
+          "artistId": "5",
+          "user": {
+            "id": "1711828003406",
+            "phoneNumber": "09374898048",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "",
+            "email": "",
+            "isAuthenticated": true,
+            "mbtiType": ""
+          },
+          "likeCounter": 0,
+          "disLikeCounter": 0
+        }
+      ],
+      "id": "5"
+    },
+    {
+      "name": "Ali Karimi",
+      "career": "Football Player",
+      "type": "ISTP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/991b3ce02c614fa29f692fe54a5abad5.png",
+      "comments": [],
+      "id": "6"
+    },
+    {
+      "name": "Yas",
+      "career": "Musician",
+      "type": "INFP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/d6cb674429a8434d95bbc7b65f8eb72c.png",
+      "comments": [
+        {
+          "id": 1711828322343,
+          "commentText": "",
+          "artistId": "7",
+          "user": {
+            "id": "1711828003406",
+            "phoneNumber": "09374898048",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "",
+            "email": "",
+            "isAuthenticated": true,
+            "mbtiType": ""
+          },
+          "likeCounter": 0,
+          "disLikeCounter": 0
+        }
+      ],
+      "id": "7"
+    },
+    {
+      "name": "MadGal",
+      "career": "Musician",
+      "type": "INFP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/58d986f9adc946c6952804dc0ea01f21.png",
+      "comments": [],
+      "id": "8"
+    },
+    {
+      "name": "Ehsan Alikhani",
+      "career": "Musician",
+      "type": "INFP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/04f827da7663484abc170c16ce19d0e2.png",
+      "comments": [],
+      "id": "9"
+    },
+    {
+      "name": "Sogang",
+      "career": "Musician",
+      "type": "INFP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/b24e33cb040d4c82a23711cee7af24a4.png",
+      "comments": [],
+      "id": "10"
+    },
+    {
+      "name": "Nika Shakarami",
+      "career": "Musician",
+      "type": "INFP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/67901a7752d141e69882b23b0b827ab2.png",
+      "comments": [],
+      "id": "11"
+    },
+    {
+      "name": "Farshad Silent",
+      "career": "Musician",
+      "type": "INFP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/d2b70bf7b5e74e40a91b35f11c3b0035.png",
+      "comments": [],
+      "id": "12"
+    },
+    {
+      "name": "Yas",
+      "career": "Musician",
+      "type": "infj",
+      "photoUrl": "https://static1.personality-database.com/profile_images/d6cb674429a8434d95bbc7b65f8eb72c.png",
+      "comments": [],
+      "id": "13"
+    },
+    {
+      "name": "MadGal",
+      "career": "Musician",
+      "type": "ISTP",
+      "photoUrl": "https://static1.personality-database.com/profile_images/58d986f9adc946c6952804dc0ea01f21.png",
+      "comments": [],
+      "id": "14"
+    }
+  ],
+  "users": [
+    {
+      "id": "1711817902104",
+      "avatar": "",
+      "username": "",
+      "email": "",
+      "mbtiType": "",
+      "isAuthenticated": true,
+      "phoneNumber": "08585858585",
+      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw"
+    },
+    {
+      "id": "1711820933986",
+      "avatar": "",
+      "username": "",
+      "email": "",
+      "mbtiType": "",
+      "isAuthenticated": true,
+      "phoneNumber": "09391451813",
+      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw"
+    },
+    {
+      "id": "1711828003406",
+      "avatar": "",
+      "username": "",
+      "email": "",
+      "mbtiType": "",
+      "isAuthenticated": true,
+      "phoneNumber": "09374898048",
+      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw"
+    }
+  ]
+}

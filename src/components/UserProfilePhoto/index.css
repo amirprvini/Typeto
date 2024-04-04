@@ -1,0 +1,23 @@
+.profileWrapper{
+
+    position: relative;
+    padding: 2rem .8rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profileWrapper img{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+}

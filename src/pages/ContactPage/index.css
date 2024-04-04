@@ -1,0 +1,158 @@
+.contactPage {
+
+    width: 100%;
+    margin: 2rem 0;
+    background-color: black;
+    color: white;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.contactPage .formContainer {
+    width: 70%;
+    height: 500px;
+    padding: .8rem .1rem ;
+    background-color: black;
+    border: 1px solid rgba(0, 206, 203, 0.3);
+    color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;    
+}
+
+.contactPageTitleWrapper{
+    
+    height: min-content;
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.contactPage .title{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+}
+
+.contactPage .description{
+    font-size: 1rem;
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.contactPage .form{
+
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    
+}
+
+.contactPage .form li {
+
+    width: 90%;
+    list-style: none;
+}
+
+
+.contactTextArea{
+    width: 90%;
+    height: 150px;
+    padding: .35rem .5rem;
+    background-color: black;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 206, 203, 0.627);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+.contactPage .form .formButtons button{
+
+    background-color: rgba(0, 206, 203, 0.2);
+    border-radius: .5rem;
+   
+}
+
+.contactPage .form .formButtons button:hover{
+    border: none;
+}
+
+
+
+
+
+
+/* -------------------------------------Media Query-------------------------------------- */
+
+@media screen and (max-width : 855px) {
+ 
+    .formContainer{
+        width: 50%;
+    }
+    
+}
+
+
+@media screen and (max-width : 680px) {
+ 
+     .formContainer{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width : 570px) {
+ 
+     .formContainer{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width : 480px) {
+ 
+     .formContainer{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 425px) {
+ 
+     .formContainer{
+        width: 80%;
+    }
+
+    .formButtons{
+        scale: .8;
+    } 
+
+    .signUpTitleWrapper{
+        scale: .85;
+    }
+
+    .form li {
+        width: 100%;
+        scale: .9;
+    }
+     
+}

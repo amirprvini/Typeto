@@ -1,0 +1,82 @@
+.navBarBtn{
+    width: min-content;
+    height: max-content;
+    display: flex;
+    
+}
+
+
+.buttonTitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.farsiTitle{
+    width: max-content;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.englishTitle{
+    width: max-content;
+    color: rgba(0, 206, 203, 0.627);
+    font-size: .9rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBarIcon{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-left: 10px;
+    color:rgba(0, 206, 203, 0.627) ;
+    font-size: 2.3rem;
+    transition: all .3s ease-in-out;
+
+}
+
+.navBarIcon:hover{
+    scale: 1.2;
+}
+
+@media screen and (max-width:1200px) {
+    .navBarBtn{
+        scale: .8;
+    }
+
+    .navBarIcon:hover{
+        scale: 1;
+    }
+    
+}
+
+
+@media screen and (max-width:1060px) {
+
+    .navBarBtn{
+        scale: .75;
+    }
+
+    .navBarIcon:hover{
+        scale: .95;
+    }
+}
+
+@media screen and (max-width:830px) {
+
+    .navBarBtn{
+        scale: .6;
+    }
+
+    .navBarIcon:hover{
+        scale: .75;
+    }
+}

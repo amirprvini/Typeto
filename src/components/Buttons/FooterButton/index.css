@@ -1,0 +1,15 @@
+.footerBtn{
+    width: max-content;
+    font-size: 1rem;
+    color: rgb(128, 128, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footerBtn:hover{
+    color: rgba(0, 206, 203, 0.627); ;
+}
+
+

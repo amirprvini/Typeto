@@ -1,0 +1,120 @@
+.header{
+    width: 100%;
+    background-color: black;
+    color: black;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topHeader{
+    width: 80%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    display: flex;
+    /* flex-wrap: wrap-reverse; */
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+
+}
+
+.topHeaderButtonsWrapper{
+
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    /* flex-grow: 1 ; */
+    
+}
+
+
+.navBarWrapper{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(99, 110, 114,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    height: 100%;
+}
+.logoIcon{
+    font-size: 5rem;
+    color: rgba(0, 206, 203, 0.5) ;
+}
+
+.logoTitleWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 2rem;
+}
+
+.logoTitle{
+    font-family: serif;
+}
+
+.logoDescription{
+    font-size: 1.2rem;
+    font-family: 'Vazirmatn';
+}
+
+
+@media screen and (max-width:730px){
+    
+.topHeaderButtonsWrapper{
+    scale: .8;
+}
+
+.topHeader div.logo{
+    scale: .8;
+}
+
+}
+
+@media screen and (max-width:650px){
+    
+.topHeaderButtonsWrapper{
+    scale: .75;
+}
+
+.topHeader div.logo{
+    scale: .75;
+}
+
+}
+
+
+@media screen and (max-width:620px){
+    
+.topHeaderButtonsWrapper{
+    scale: .95;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.topHeader div.logo{
+    scale: .95;
+}
+
+
+.topHeader{
+    
+    flex-direction: column-reverse;
+    height: 150px;
+}
+
+}

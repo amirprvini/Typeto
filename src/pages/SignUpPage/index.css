@@ -1,0 +1,139 @@
+.signUpPage{
+
+    width: 100%;
+    /* height: 100%; */
+    margin: 2rem 0;
+    background-color: black;
+    color: white;
+    /* font-size: 10rem; */
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.signUpPage .formContainer {
+
+    
+    width: 35%;
+    height: 500px;
+    padding: 1rem .1rem ;
+    background-color: black;
+    border: 1px solid rgba(0, 206, 203, 0.3);
+    color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;    
+}
+
+.signUpPage .signUpTitleWrapper{
+    
+    height: min-content;
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.title{
+    color: rgba(99, 110, 114,.3);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+}
+
+.description{
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.signUpPage .form{
+
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    
+}
+
+.signUpPage .form li {
+
+    width: 90%;
+    list-style: none;
+}
+
+.signUpPage .form .formButtons{
+    display: flex;
+    gap: 1.3rem;
+}
+
+
+
+/* -------------------------------------Media Query-------------------------------------- */
+
+@media screen and (max-width : 855px) {
+ 
+    .formContainer{
+        width: 50%;
+    }
+    
+}
+
+
+@media screen and (max-width : 680px) {
+ 
+     .formContainer{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width : 570px) {
+ 
+     .formContainer{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width : 480px) {
+ 
+     .formContainer{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 425px) {
+ 
+     .formContainer{
+        width: 80%;
+    }
+
+    .formButtons{
+        scale: .8;
+    } 
+
+    .signUpTitleWrapper{
+        scale: .85;
+    }
+
+    .form li {
+        width: 100%;
+        scale: .9;
+    }
+     
+}

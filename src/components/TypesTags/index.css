@@ -1,0 +1,12 @@
+.typesTags {
+    background-color: rgb(211, 193, 193);
+    display: flex;
+    align-items: center;
+    padding: .3rem .6rem;
+    border-radius: .7rem;
+    color: black;
+}
+
+.tagIcon{
+    margin-left: .3rem;
+}

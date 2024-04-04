@@ -1,0 +1,22 @@
+.userProfileButtonWrapper{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.userProfileButton{
+    display: flex;
+    font-size: 1.5rem;
+    padding: .5rem .7rem;
+}
+
+
+.userIconWrapper{
+    font-size: 2.5rem;
+}
+
+.userIconWrapper:hover{
+    color: rgba(0, 206, 203, 0.627);
+    border-radius: .5rem;
+    opacity: .8;
+}

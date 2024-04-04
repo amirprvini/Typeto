@@ -1,0 +1,25 @@
+.profilePage{
+   width: 75%;
+   display: flex; 
+   gap: 1rem;
+}
+
+
+.profilePage .communitySection{
+    width: 25%;
+}
+
+.profilePage .profileContent {
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePage .SideBar {
+    
+    width: 25%;
+    background-color: black;
+    color: white;
+}
+

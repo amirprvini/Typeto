@@ -1,0 +1,48 @@
+.likeSection{
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+}
+
+.like-Dislike-Wrapper{
+    
+    width: min-content;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    gap: 1.3rem;
+    font-size: 1.2rem;
+    background-color: black;
+    border-radius: 1rem;
+    padding: 0 .5rem;
+    border: 1px solid white;
+
+}
+
+button[class*="ikeWrapper"]{
+    display: flex;
+    gap: 0.2rem;
+    height: 100%;
+    align-items: center;
+}
+
+
+
+div[class*="ikeIconWrapper"]{
+    
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-size: 1.3rem;
+
+}
+
+div[class*="ikeCounter"]{
+
+    height: 100%;
+    padding-top: 1px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+
+}

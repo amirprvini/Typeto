@@ -1,0 +1,55 @@
+.addCommentWrapper{
+
+    color: white;
+    background-color: black;
+    border: 1px solid rgba(0, 206, 203, 0.2);
+    border-radius: 1rem;
+    padding: 1rem .5rem;
+    margin: 1rem 0;
+
+}
+
+.commentTitleWrapper{
+    
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 1rem;
+
+}
+
+
+.commentForm{
+    margin-top: 2rem;
+}
+
+.commentBtnWrapper{
+    width: 100%;
+    display: flex;
+    padding-left: 1rem;
+    justify-content: flex-end;
+}
+
+.commentInput{
+
+    width: 100%;
+    background-color: black;
+    /* text-decoration: none; */
+}
+
+
+.commentBtnWrapper{
+    margin-top: 2rem;
+}
+
+.addCommentButton{
+
+    border: 1px solid rgba(0, 206, 203, 0.2);
+    border-radius: .7rem;
+    padding: .3rem 1rem;
+}
+
+
+.addCommentButton:hover{
+    background-color: rgba(0, 206, 203, 0.2);
+}
