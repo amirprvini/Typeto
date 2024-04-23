@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { ChangeEvent, useContext, useState } from "react";
 import './index.css';
 import { AppContext } from "../context/store";
 import UserItemsButton from "../Buttons/UserItemsButton";
 import { FaUserEdit } from "react-icons/fa";
 import { RxExit } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
+import UserAvatar from "../UserAvatar";
 
 
 interface UserProfileItemsList{
@@ -12,6 +13,8 @@ interface UserProfileItemsList{
 }
 export const UserProfileItemsList : React.FC<UserProfileItemsList> = ({setVal}) : JSX.Element =>{
 
+
+    const [image,setImage] = useState<any>(null) ; 
      
 
     const itemsBtnData = [
@@ -51,13 +54,28 @@ export const UserProfileItemsList : React.FC<UserProfileItemsList> = ({setVal}) 
         }
     }
 
+
+  const fileChangedHandler = (e:any) => {
+  const selectFile = e.target.file ? e.target.files[0] : null;
+
+  if (selectFile) {
+    setImage(URL.createObjectURL(selectFile));
+  }
+};
+
     return <div className="userProfileItemsListWrapper" >
         
         <div className="avatarWrapper">
-            <div className="avatar">
-                <img src="https://img.icons8.com/ios-glyphs/90/000000/person-male.png" alt="avatar" />
-            </div>
+        <UserAvatar avatarUrl={image} />
         </div>
+
+        {
+            image == null && <div className="chooseFileWrapper w-full text-[.8rem] flex justify-center">
+
+        <input type="file" name="myImage" onChange={fileChangedHandler}/>
+        
+        </div>
+        }
 
         <div className="userPhoneNumberWrapper">
         

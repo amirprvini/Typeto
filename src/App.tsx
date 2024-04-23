@@ -3,6 +3,8 @@ import { RouteProvider } from './routes/route';
 import { QueryClientProvider } from 'react-query';
 import { QueryClientStore } from './components/services/queryClientStore';
 import { ContextProvider } from './components/context/store';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 // import { AppProvider } from './context/store';
 
 

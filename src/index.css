@@ -18,6 +18,9 @@ body{
     /* background: radial-gradient(rgba(0, 206, 203, 0.1) , black ); */
     /* font-family: 'Katibeh', serif; */
     font-family: 'Vazirmatn', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #root{

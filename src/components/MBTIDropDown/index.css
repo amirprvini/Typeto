@@ -23,3 +23,9 @@
     height: 50px;
     border: 1px solid gray;
 }
+
+.typesList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -3,6 +3,7 @@ import './index.css'
 
 interface IPersonalityTypesCard {
     typeTitle ?: string ,
+    widthProp ?: number 
 }
 
 

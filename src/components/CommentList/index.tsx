@@ -24,7 +24,7 @@ export const CommentList : React.FC<commentListProps> = forwardRef(({artistName,
 
     const [state,setState] = useState<commentProps[]>();
     const [updateList , setUpdateList] = useState<boolean>();
-    const user = useContext(AppContext);
+    const {user} = useContext(AppContext);
 
     const handleUpdateList=()=>{
         setUpdateList(!updateList);
@@ -36,15 +36,14 @@ export const CommentList : React.FC<commentListProps> = forwardRef(({artistName,
         // console.log("glb user in comments: ",user)
     },[updateList])
 
-    // console.log("update in comment List: " , handleUpdateList);
-    // console.log("state list: " , state);
+    console.log('comments in list: ' , comments) ; 
 
     return <div className="commentListSection" >
 
         {<ul className="commentsList" ref={ref}>
             
-            {comments?.reverse().map((comment)=>{
-                return <li key={comment.id}> <CommentSection comment={comment.commentText} userName={user.username} userType={user.mbtiType} /> </li>
+            {comments?.map((comment)=>{
+                return <li key={comment.id}> <CommentSection comment={comment.commentText} userName={comment.user?.username || ''} userType={comment.user?.mbtiType || ''} /> </li>
             })}  
 
         </ul>

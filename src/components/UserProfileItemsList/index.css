@@ -19,12 +19,6 @@
     align-items: center;
 }
 
-.avatar{
-    background-color: white;
-    border-radius: 50%;
-    padding: 1rem;
-}
-
 .userPhoneNumberWrapper{
     width: 100%;
     display: flex;
