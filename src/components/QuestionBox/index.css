@@ -3,7 +3,7 @@
     gap: .8rem;
     flex-direction: column;
     display: flex;
-    border: 1px solid rgba(0, 206, 203, 0.627);
+    /* border: 1px solid rgba(0, 206, 203, 0.627); */
     background-color: black;
     padding: 1rem .5rem;
     border-radius: 1rem;
