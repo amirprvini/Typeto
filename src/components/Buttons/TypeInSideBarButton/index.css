@@ -1,0 +1,13 @@
+.typeInSideBarBtn { 
+    padding: .1rem .4rem;
+    width: 3.5rem;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: .5rem;
+}
+
+
+.typeInSideBarBtn:hover  {
+    background-color: rgba(0, 206, 203, 0.06);
+}

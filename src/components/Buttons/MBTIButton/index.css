@@ -3,13 +3,13 @@
     background-color: black;
     border-radius: .5rem;
     padding-left: .5rem;
-    justify-content: space-around;
+    justify-content: center;
     border: 2px solid rgba(0, 206, 203, 0.2) ;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
-    /* width: 50%; */
+    width: 100%;
 
 }
 

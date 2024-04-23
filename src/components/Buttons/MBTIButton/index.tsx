@@ -2,19 +2,21 @@ import { useNavigate } from 'react-router-dom'
 import './index.css'
 
 interface IMBTIButton {
-    typeTitle ?: string ,
-    widthProp ?: number 
+    typeTitle : string ,
+    widthProp ?: number ,
+    onCompleteButton : (type:string)=>void 
 }
 
 
-const MBTIButton : React.FC<IMBTIButton> = ({typeTitle}) : JSX.Element =>{
+const MBTIButton : React.FC<IMBTIButton> = ({typeTitle,onCompleteButton}) : JSX.Element =>{
    
    const navigate = useNavigate() ; 
    
     const handleClick = ()=> {
      
        // navigate("/personalitytypes/" + typeTitle)
-       console.log('click shodam !!! ')
+       console.log(typeTitle)
+       onCompleteButton(typeTitle)
 
     } 
 
