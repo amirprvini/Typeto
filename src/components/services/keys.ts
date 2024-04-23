@@ -1,5 +1,7 @@
 export const ReactQueryKeys = {
     Login:'login' , 
     GetArtists:'GetArtists', 
-    NewComment:'NewComment'
+    GetAllArtists:'GetAllArtists',
+    NewComment:'NewComment',
+    ConfirmUser:'ConfirmUser'
 }
