@@ -41,7 +41,6 @@ const ArtistCard : React.FC<IArtistCard> = ({charName,charType,career,charProfil
         
             </div>
 
-           
         </div>
     )
 
