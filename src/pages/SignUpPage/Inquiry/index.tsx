@@ -157,8 +157,10 @@ export const InquiryStep : React.FC<InquiryStepProps> = ({onNextStep,initialValu
 
                 <div className="formButtons">
 
-                    <Link to="/login"> <TopHeaderButton title="ورود" icon={<CgLogIn />} /> </Link>
-                    <TopHeaderButton title="ثبت نام" buttonType={"submit"} icon={<TiUserAdd />}/>
+                    {/* <Link to="/home"> <TopHeaderButton title="انصراف" icon={<CgLogIn />} /> </Link> */}
+                    
+                    <Link to="/home"> <TopHeaderButton title="انصراف"/> </Link>
+                    <TopHeaderButton title="ادامه" buttonType={"submit"} icon={<TiUserAdd />}/>
 
                 </div>
 

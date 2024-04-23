@@ -28,7 +28,7 @@ const PersonalityTypesPage : React.FC = () : JSX.Element =>{
     //     fetchPersonalityTypes();
     // },[])
 
-        const personalityTypes =  [
+    const personalityTypes =  [
     {
       "title": "INFP",
       "id": "0cbb"

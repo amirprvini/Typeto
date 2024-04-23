@@ -16,7 +16,7 @@
     flex-direction: column;
 }
 
-.profilePage .SideBar {
+.profilePage .artistSideBarWrapper {
     
     width: 25%;
     background-color: black;

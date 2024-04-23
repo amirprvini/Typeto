@@ -12,6 +12,10 @@ import { commentType } from '../../components/CommentSection';
 import { AppContext } from '../../components/context/store';
 import { FormProps, useLocation, useParams } from 'react-router-dom';
 import { UseArtistQuery } from '../../components/services/queries/useArtistQuery';
+import CommentSectionModal from '../../components/Modals/CommentModal';
+import { createPortal } from 'react-dom';
+import FilterComments from '../../components/FilterComments';
+import ArtistSideBar from '../../components/Layout/ArtistSideBar';
 
 interface ProfilePageProps {
     
@@ -19,8 +23,6 @@ interface ProfilePageProps {
 
 
 export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
-
-
 
     const params = useParams() ; 
     const {user} = useContext(AppContext) ; 
@@ -51,19 +53,16 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
     const [info,setInfo] = useState<FormProps>();
     const [update , setUpdate] = useState<boolean>(false) ; 
     const ref = useRef<any>();
-
-    // const fetchArtists = async (profileName:string)=>{
-    //     const response = await AXIOS.get(API_URLS.GetArtists);
-    //     response.data.map((item:any)=>{
-    //         if(profileName === item.name.toLowerCase().split(' ').join(''))
-    //         setState(item);
-    //     })       
-    // }
-
-
+    const modalRef = useRef<any>();
 
     const handleClick = ()=>{
         setUpdate(!update)
+
+        if((user === undefined) || (user.username === '' && user.mbtiType ==='')){
+
+            modalRef.current.showModal();
+            console.log('amirrrrrrrrrrrrrrrrrrrr')
+        }
     }
 
 
@@ -92,12 +91,18 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
     },[update])
 
 
+    console.log('data: ' , data)
     console.log("state: " , state);
-    console.log("Comments: " , state?.comments);
+    console.log("Comments: " , data?.comments);
     
 
     return (
         <div className="profilePage"> 
+
+        {createPortal(
+        <CommentSectionModal ref={modalRef} />,
+        document.body
+      )}
         
         <div className="communitySection">
 
@@ -115,15 +120,19 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
 
                 <div className="commentsWrapper mt-20">
 
-                    <div className="titleContainer mb-8">
+
+                    <div className="titleContainer mb-5">
                         <div className="titleWrapper w-[50%]">
                         <h1 className='title text-[1.5rem]'> دیدگاه کاربران </h1> </div>
                     </div>
 
-
                     <div className="addCommentSection mb-20">
-                        <AddCommentSection artist={data!} user={user} onclick={handleClick} />
+                        <AddCommentSection artist={data!} user={user} onclick={handleClick} />    
                     </div>
+
+                    {/* <div className="filterCommentsWrapper mb-5">
+                        <FilterComments />
+                    </div> */}
 
                     <div className="commentListWrapper">
                         <CommentList artistName={data?.name} comments={data?.comments} ref={ref} updateProp={update}/>
@@ -133,8 +142,8 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
             </div>
 
 
-            <div className="SideBar">
-                <SideBar />
+            <div className="artistSideBarWrapper">
+                <ArtistSideBar  />
             </div>
 
          </div>

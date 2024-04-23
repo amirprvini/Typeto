@@ -14,9 +14,10 @@ import { AXIOS } from '../../config/axios.config'
 import { AppContext } from '../../components/context/store'
 import { UseAllArtistQuery } from '../../components/services/queries/useAllArtistsQuery'
 import { artistType } from '../../components/AddCommentSection'
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+
+import Slider from "react-slick";
 import ArtistCard from '../../components/ArtistCard'
+import MBTICard from '../../components/MBTICard'
 let counter = 1; 
 let typesCounter = 1; 
 
@@ -32,69 +33,85 @@ export const HomePage : React.FC = () : JSX.Element =>{
         setState(true) ;
     }
 
-      const personalityTypes =  [
+    const personalityTypes =  [
     {
       "title": "INFP",
+      "typeDescription":"ایده آل گرا",
       "id": "0cbb"
     },
     {
       "title": "INTP",
+      "typeDescription":"ایده آل گرا",
       "id": "0b05"
     },
     {
       "title": "INTJ",
+      "typeDescription":"ایده آل گرا",
       "id": "a388"
     },
     {
       "title": "INFJ",
+      "typeDescription":"ایده آل گرا",
       "id": "073d"
     },
     {
       "title": "ENTP",
+      "typeDescription":"ایده آل گرا",
       "id": "b3a4"
     },
     {
       "title": "ENFP",
+      "typeDescription":"ایده آل گرا",
       "id": "07e3"
     },
     {
       "title": "ISTP",
+      "typeDescription":"ایده آل گرا",
       "id": "5a8a"
     },
     {
       "title": "ISFP",
+      "typeDescription":"ایده آل گرا",
       "id": "815c"
     },
     {
       "title": "ENTJ",
+      "typeDescription":"ایده آل گرا",
       "id": "4f6d"
     },
     {
       "title": "ENFJ",
+      "typeDescription":"ایده آل گرا",
       "id": "9967"
     },
     {
       "title": "ISTJ",
+      "typeDescription":"ایده آل گرا",
       "id": "417b"
     },
     {
       "title": "ESTP",
+      "typeDescription":"ایده آل گرا",
       "id": "2b28"
     },
     {
       "title": "ESTP",
+      "typeDescription":"ایده آل گرا",
       "id": "c6c9"
     },
     {
       "title": "ESFP",
+      "typeDescription":"ایده آل گرا",
       "id": "8269"
     },
     {
       "title": "ESEI",
+      "typeDescription":"ایده آل گرا",
       "id": "2094"
     },
     {
       "title": "ESTI",
+      "typeDescription":"ایده آل گرا",
       "id": "04f3"
     }
   ] ; 
@@ -104,33 +121,100 @@ export const HomePage : React.FC = () : JSX.Element =>{
         navigate(`/profile/${id}`)
     }
 
-    const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
+ var typeSettings = {
+    dots: true,
+    infinite: true,
+    // slidesToShow: 3,
+    // slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    // initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    centerMode: true,
+    centerPadding: "60px",
+    // swipeToSlide: true,
+    // rtl: true ,
+     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
+  var settings = {
+    dots: true,
+    infinite: true,
+    // slidesToShow: 3,
+    // slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    // initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    centerMode: true,
+    centerPadding: "60px",
+    // swipeToSlide: true,
+    // rtl: true ,
+     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
-
-const Artist = data?.map((fame)=>{
-                          return <ArtistCard  charName={fame.name} charType={fame.type}
-                          career={fame.career}  charProfileUrl={fame.photoUrl} onclick={()=>{handleClick(fame.id)}}/>
+        const Artist = data?.map((fame)=>{
+          return <ArtistCard  charName={fame.name} charType={fame.type}
+          career={fame.career}  charProfileUrl={fame.photoUrl} onclick={()=>{handleClick(fame.id)}}/>
+              })
+        
+        const mbtiType = personalityTypes.map((type)=>{
+                        return <MBTICard typeTitle={type.title} faDescription={type.typeDescription} />
                         })
-
 
     return (
         <div className="homePage">
@@ -145,24 +229,7 @@ const Artist = data?.map((fame)=>{
             
             <div className="famePeopleWrapper">
 
-                {/* <ul className="famePeopleList">
-                    
-                    {data?.map((fame)=>{
-
-                      if(counter <= 8 ){
-                        counter ++ ;
-                        return <ArtistCard  charName={fame.name} charType={fame.type}
-                        career={fame.career}  charProfileUrl={fame.photoUrl} onclick={()=>{handleClick(fame.id)}}/>
-                      }
-                        })}                  
-
-                </ul> */}
-
-
-                <Carousel  responsive={responsive}>{Artist}</Carousel>
-
-
-
+                <Slider {...settings}> {Artist} </Slider>
 
                 <div className="moreButtonWrapper">
                     <Link to={"/famouspeople"}> <MoreButton /></Link>
@@ -185,19 +252,19 @@ const Artist = data?.map((fame)=>{
             
             <div className="typesWrapper">
 
-                <ul className="typesList">
+                {/* <ul className="typesList">
                     
                     {personalityTypes.map((type)=>{
                         
-                        // if(typesCounter <=6 ){
-                        // typesCounter ++ ;
-                        // return <PersonalityTypesCard typeTitle={type.title} />} 
+                        return <MBTICard typeTitle={type.title} faDescription={type.typeDescription} />
+                
+                        })} 
 
-                        return <PersonalityTypesCard typeTitle={type.title} />
-                        
-                        })}
+                  
 
-                </ul>
+                </ul> */}
+
+                <Slider {...typeSettings}> {mbtiType} </Slider>
 
                 <div className="moreButtonWrapper">
                     <Link to={"/personalitytypes"}> <MoreButton /></Link>
@@ -227,7 +294,7 @@ const Artist = data?.map((fame)=>{
         
         </div>
 
-        <div className="SideBar"> <SideBar/> </div>
+        {/* <div className="SideBar"> <SideBar/> </div> */}
     
          </div>
     )
