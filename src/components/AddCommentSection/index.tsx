@@ -13,6 +13,7 @@ import { ReactQueryKeys } from '../services/keys';
 import { useParams } from 'react-router-dom';
 import { IUserState } from '../context/types/context.types';
 import { commentProps } from '../context/types/comment.type';
+import CommentSectionModal from '../Modals/CommentModal';
 
 interface AddCommentSectionProps {
     artist ?: artistType ; 
