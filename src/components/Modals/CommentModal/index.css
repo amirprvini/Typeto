@@ -1,0 +1,23 @@
+.modal{
+    width: 30%;
+    height: max-content ;
+    justify-self: center;
+    align-self: center;
+    padding: 1.5rem .5rem;
+    border-radius: .3rem;
+    /* background-color:rgba(0, 206, 203, 0.2);
+    */
+    border: 1.5px solid rgba(0, 206, 203, 0.2);
+    background-color: white;
+    color: black;
+}
+
+
+.modal-box{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
