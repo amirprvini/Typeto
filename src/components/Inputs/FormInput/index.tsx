@@ -19,7 +19,7 @@ const FormInput : React.FC<IFormInputProps> = forwardRef(function FormInput(
     
     return (
         <input ref={ref} type={type} title={title} placeholder={placeHolderStr}
-         className="formInput w-40 h-8 text-[20px] " onChange={onchange} value={formValue} id={inputId} />
+         className="formInput h-8" onChange={onchange} value={formValue} id={inputId} />
     )
 })
 

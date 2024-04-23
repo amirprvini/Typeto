@@ -6,10 +6,13 @@ interface TextInputProps {
     title?: string ; 
     placeHolderStr ?: string ; 
     type?: string ; 
-
+    onchange ?: any ;
+    inputValue ?: any ; 
+    inputId ?: string ; 
 }
 
-const TextInput : React.FC<TextInputProps> = ({lable,title,placeHolderStr,type}) :JSX.Element => {
+const TextInput : React.FC<TextInputProps> = ({lable,title,placeHolderStr,type
+  ,onchange,inputValue,inputId}) :JSX.Element => {
   return (
     <div className='textInputWrapper'>
 
@@ -19,7 +22,8 @@ const TextInput : React.FC<TextInputProps> = ({lable,title,placeHolderStr,type})
                 <p className="lable">{lable}</p>
             </div>
 
-            <input className='userTextInput' type={type} placeholder={placeHolderStr} />
+            <input className='userTextInput' type={type} placeholder={placeHolderStr}
+             onChange={onchange} value={inputValue} id={inputId} />
 
         </div>
       
