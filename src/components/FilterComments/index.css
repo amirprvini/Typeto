@@ -1,0 +1,27 @@
+.filterComments{
+    color: white;
+    border: 1px solid rgba(0, 206, 203, 0.627);
+    display: flex;
+    justify-content: space-around;
+    border-radius: .2rem;
+    
+}
+
+
+
+.filterComments div[class*="Wrapper"]{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    padding: .2rem 0;
+}
+
+
+.filterComments div[class*="Wrapper"]:hover {
+    background-color: rgba(0, 206, 203, 0.627);
+}
+
+.popularWrapper{
+    border-left: 1px solid rgba(0, 206, 203, 0.627);
+    border-right: 1px solid rgba(0, 206, 203, 0.627);
+}
