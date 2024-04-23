@@ -18,8 +18,6 @@ interface IHeaderProps extends React.PropsWithChildren  {
 const Header : React.FC<IHeaderProps>  = ({isAthenticated=false}) : JSX.Element =>{
 
     const {user} = useContext(AppContext);
-    // console.log("global user in header: ",user);
-    // console.log("global user in header: ",user.isAuthenticated);
 
     const navigate = useNavigate();
 
@@ -27,10 +25,6 @@ const Header : React.FC<IHeaderProps>  = ({isAthenticated=false}) : JSX.Element 
        
         navigate("/");
     }
-
-    // useEffect(()=>{
-    //     handleClick() ; 
-    // },[])
 
     return (
         <div className="header">
@@ -47,8 +41,8 @@ const Header : React.FC<IHeaderProps>  = ({isAthenticated=false}) : JSX.Element 
                     </div>
 
                     {user?.isAuthenticated ?  <UserProfile/> : <div className="topHeaderButtonsWrapper">
-                        <Link to="/signUp"> <TopHeaderButton title="ثبت نام" icon={<TiUserAdd />}/> </Link>
-                        <Link to="/login"> <TopHeaderButton title="وارد شوید" icon={<CgLogIn />} /> </Link>
+                        <Link to="/signUp"> <TopHeaderButton title="ثبت نام | ورود" icon={<CgLogIn />}/> </Link>
+                        {/* <Link to="/login"> <TopHeaderButton title="وارد شوید" /> </Link> */}
                     </div>}
 
 
