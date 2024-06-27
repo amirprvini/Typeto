@@ -1,15 +1,17 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import './index.css'
+import './index.css' ; 
 
 interface IMBTICard {
-    typeTitle ?: string ,
-    faDescription ?: string , 
+    typeTitle : string ,
+    faTitle ?: string ,
+    description ?: string ,
+    imgUrl ?: string , 
     widthProp ?: number 
 }
 
-
-const MBTICard : React.FC<IMBTICard> = ({typeTitle,faDescription}) : JSX.Element =>{
+const MBTICard : React.FC<IMBTICard> = ({typeTitle,faTitle,description,
+    imgUrl}) : JSX.Element =>{
    
    const navigate = useNavigate() ; 
    
@@ -19,14 +21,29 @@ const MBTICard : React.FC<IMBTICard> = ({typeTitle,faDescription}) : JSX.Element
 
     } 
 
+    console.log('type title in card: ' , faTitle)
+
     return ( 
-        <div className="mbtiCard cursor-pointer flex flex-col" onClick={handleClick}>
+        <div className="mbtiCard w-[95%] cursor-pointer flex flex-col justify-start space-y-5 px-4 py-2" onClick={handleClick}>
 
-            <p className="mbtiCard-EnTitle"> {typeTitle} </p>
+            {/* <div className="faTitleWrapper h-1/4 flex items-start">
+                <p className="faTitle">
+                    {faTitle}
+                </p>
+            </div>
+             */}
+             
+            <div className="symbolWrapper h-[250px]">
+                <img src={'./images/' + typeTitle + '.jpg'} alt={typeTitle + '-Symbol'} width='150px' height='250px' />
+            </div>
 
-            <div className="typeDescriptionWrapper">
-                <p className="typeDescription">
-                    {faDescription}
+            <div className="EnTitleWrapper w-full h-1/4 flex justify-center">
+                <p className="mbtiCard-EnTitle"> {typeTitle} </p>
+            </div>
+
+            <div className="typeDescriptionWrapper mt-auto h-[7rem] text-xl">
+                <p className="typeDescription flex flex-wrap " dir='rtl'>
+                    {description}
                 </p>
             </div>
 
