@@ -1,7 +1,7 @@
 .homePage{
 
     
-    width: 75%;
+    width: 100%;
     /* margin: 1rem 0; */
     background-color: black;
     color: white;
@@ -31,12 +31,12 @@
 
 .homePage .showTypes{
 
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     
 
 }
@@ -44,7 +44,7 @@
 .homePage .showTypes .typesWrapper{
 
 
-    width: 60%;
+    width: 100%;
     background-color: black;
     /* border: 1px solid rgba(0, 206, 203, 0.627); */
     border-radius: 1rem ;
@@ -60,15 +60,6 @@
 
 }
 
-
-
-
-
-
-
-
-
-
 .homePage .showFamePeople{
 
     width: 100%;
@@ -76,7 +67,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     
 
 }
@@ -130,3 +121,41 @@
 .titleWrapper{
     width: 40%;
 }
+
+
+
+/* -------------------------media queries ---------------------- */
+
+/* @media screen and (max-width:300px) {
+    
+    .slick-track{
+        display: flex;
+        gap: 300px;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    
+    .slick-track{
+        display: flex;
+        gap: .5rem;
+    }
+}
+
+
+@media screen and (max-width:650px) {
+    
+    .slick-track{
+        display: flex;
+        gap: 10rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    
+    .slick-track{
+        display: flex;
+        gap: 3.5rem;
+    }
+} */

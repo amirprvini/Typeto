@@ -7,6 +7,7 @@ import { AXIOS } from '../../config/axios.config';
 import { API_URLS } from '../../constants/api.urls';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ArtistCard from '../../components/ArtistCard';
 
 
 export const FamousPeoplePage : React.FC = () : JSX.Element =>{
@@ -52,7 +53,7 @@ export const FamousPeoplePage : React.FC = () : JSX.Element =>{
             
          </div>
 
-        <div className="SideBar"> <SideBar/> </div>
+        <div className="SideBar"> <ArtistCard/> </div>
         
         
          </div>

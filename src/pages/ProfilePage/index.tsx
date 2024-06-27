@@ -1,6 +1,5 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { SideBar } from '../../components/Layout/SideBar';
-import './index.css';
 import { AXIOS } from '../../config/axios.config';
 import { API_URLS } from '../../constants/api.urls';
 import { object } from 'yup';
@@ -66,7 +65,7 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
     }
 
 
-    const handleUpdateInList = () : boolean =>{
+    const handleUpdateInList = ():boolean =>{
         return update ; 
     }
 
@@ -97,18 +96,14 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
     
 
     return (
-        <div className="profilePage"> 
+        <div className="profilePage w-3/4 flex gap-4"> 
 
         {createPortal(
         <CommentSectionModal ref={modalRef} />,
         document.body
       )}
-        
-        <div className="communitySection">
 
-        </div>
-
-            <div className="profileContent">
+            <div className="profileContent w-3/4 flex flex-col">
 
                 <div className="profileContainer">
 
@@ -141,8 +136,7 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
 
             </div>
 
-
-            <div className="artistSideBarWrapper">
+            <div className="artistSideBarWrapper w-1/4 bg-black text-white">
                 <ArtistSideBar  />
             </div>
 

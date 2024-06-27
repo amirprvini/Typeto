@@ -6,6 +6,7 @@ import {personalityTypes} from './PersonalityTypesData'
 import { AXIOS } from '../../config/axios.config';
 import { API_URLS } from '../../constants/api.urls';
 import { useEffect, useState } from 'react';
+import MBTICard from '../../components/MBTICard';
 
 
 
@@ -95,6 +96,90 @@ const PersonalityTypesPage : React.FC = () : JSX.Element =>{
     }
   ] ;
 
+  
+    const mbtiTypes =  [
+    {
+      "title": "INFP",
+      "typeDescription":"ایده آل گرا",
+      "id": "0cbb"
+    },
+    {
+      "title": "INTP",
+      "typeDescription":"ایده آل گرا",
+      "id": "0b05"
+    },
+    {
+      "title": "INTJ",
+      "typeDescription":"ایده آل گرا",
+      "id": "a388"
+    },
+    {
+      "title": "INFJ",
+      "typeDescription":"ایده آل گرا",
+      "id": "073d"
+    },
+    {
+      "title": "ENTP",
+      "typeDescription":"ایده آل گرا",
+      "id": "b3a4"
+    },
+    {
+      "title": "ENFP",
+      "typeDescription":"ایده آل گرا",
+      "id": "07e3"
+    },
+    {
+      "title": "ISTP",
+      "typeDescription":"ایده آل گرا",
+      "id": "5a8a"
+    },
+    {
+      "title": "ISFP",
+      "typeDescription":"ایده آل گرا",
+      "id": "815c"
+    },
+    {
+      "title": "ENTJ",
+      "typeDescription":"ایده آل گرا",
+      "id": "4f6d"
+    },
+    {
+      "title": "ENFJ",
+      "typeDescription":"ایده آل گرا",
+      "id": "9967"
+    },
+    {
+      "title": "ISTJ",
+      "typeDescription":"ایده آل گرا",
+      "id": "417b"
+    },
+    {
+      "title": "ESTP",
+      "typeDescription":"ایده آل گرا",
+      "id": "2b28"
+    },
+    {
+      "title": "ESTP",
+      "typeDescription":"ایده آل گرا",
+      "id": "c6c9"
+    },
+    {
+      "title": "ESFP",
+      "typeDescription":"ایده آل گرا",
+      "id": "8269"
+    },
+    {
+      "title": "ESEI",
+      "typeDescription":"ایده آل گرا",
+      "id": "2094"
+    },
+    {
+      "title": "ESTI",
+      "typeDescription":"ایده آل گرا",
+      "id": "04f3"
+    }
+  ] ; 
+
     return <div className="personalityTypesPage">
         
         
@@ -102,15 +187,20 @@ const PersonalityTypesPage : React.FC = () : JSX.Element =>{
 
             <div className="typesListWrappwe">
 
-                <div className="titleContainer mb-10"> <div className="titleWrapper"> <h1 className='title'>انواع تایپ های شخصیتی</h1> </div> </div>
+                <div className="titleContainer mb-5"> <div className="titleWrapper"> <h1 className='title'>انواع تایپ های شخصیتی</h1> </div> </div>
             
             <ul className="typesList">
                 
-           {personalityTypes.map((data)=>{
+           {/* {personalityTypes.map((data)=>{
 
             return <li key={data.title}> <PersonalityTypesCard typeTitle={data.title}/> </li>
 
-            })}
+            })} */}
+
+            {
+                mbtiTypes.map((type)=>{
+                    return <MBTICard typeTitle={type.title} faTitle={type.typeDescription} />
+                        })}
 
             </ul>
 

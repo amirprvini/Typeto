@@ -16,7 +16,7 @@ const UserProfilePage = () => {
     return (
     <div className="userProfilePage"> 
 
-    <div className="userSideBarContainer"> <UserProfileItemsList setVal={(number)=>setValue(number)} /> </div>    
+    <div className="userSideBarContainer "> <UserProfileItemsList setVal={(number)=>setValue(number)} /> </div>    
 
     <div className="userContentContainer"> <SignOut /> 
       

@@ -47,15 +47,15 @@ const TypesInfoPage : React.FC <ITypesInfoPage> = ({title}) :JSX.Element =>{
                     <div className="section1Wrapper">
 
                         <div className="section1">
-
+{/* 
                             <h4 className="sectionTitle">
                             {data.section1Title}
-                            </h4>
+                            </h4> */}
 
                             <p className="section1Content1">
-                            {data.section1Content1}
+                            {data.section1Content}
                             </p>
-
+{/* 
                             <div className="tagsWrapper">
                                 <ul className="tagsList">
                                     {data.tags.map((tag)=>{
@@ -66,7 +66,7 @@ const TypesInfoPage : React.FC <ITypesInfoPage> = ({title}) :JSX.Element =>{
 
                             <p className="section1Content2">
                                 {data.section1Content2}
-                            </p>
+                            </p> */}
 
                         </div>
 
@@ -82,17 +82,71 @@ const TypesInfoPage : React.FC <ITypesInfoPage> = ({title}) :JSX.Element =>{
                             {data.section2Title}
                         </h4>
 
-                        <p className="section2Content1">
-                            {data.section1Content1}
+                        <p className="section2Content">
+                            {data.section2Content}
                         </p>
 
-                        <p className="section2Content2">
-                            {data.section1Content2}
-                        </p>
-                        
                         </div>
 
                     </div>
+
+                    <div className="section2Wrapper">
+
+                        <div className="section2">
+
+                        <h4 className="sectionTitle">
+                            {data.section3Title}
+                        </h4>
+
+                        <p className="section2Content">
+                            {data.section3Content}
+                        </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div className="section2Wrapper">
+
+                        <div className="section2">
+
+                        <h4 className="sectionTitle">
+                            {data.section4Title}
+                        </h4>
+
+                        <p className="section2Content">
+                            {data.section4Content}
+                        </p>
+
+                        </div>
+
+                    </div>
+
+
+                        <div className="section2Wrapper">
+
+                        <div className="section2">
+
+                        <h4 className="sectionTitle">
+                            {data.section5Title}
+                        </h4>
+
+                        <ul className="section2Content">
+                            {data.section5Content?.map((sentense)=>{
+                                 return <div className="sentenseWrapper">
+                                    <p className="sentence mb-2">
+                                        {' - ' + sentense}
+                                    </p>
+                                </div>
+                            })}
+                        </ul>
+
+                        </div>
+
+                    </div>
+
+
 
 
 

@@ -18,6 +18,8 @@ import { artistType } from '../../components/AddCommentSection'
 import Slider from "react-slick";
 import ArtistCard from '../../components/ArtistCard'
 import MBTICard from '../../components/MBTICard'
+import TypeSection from '../../components/TypeSection'
+import { SentinelsTypes, analystsTypes, diplomatsTypes, explorersTypes } from '../../components/TypeSection/typeSecData'
 let counter = 1; 
 let typesCounter = 1; 
 
@@ -33,89 +35,6 @@ export const HomePage : React.FC = () : JSX.Element =>{
         setState(true) ;
     }
 
-    const personalityTypes =  [
-    {
-      "title": "INFP",
-      "typeDescription":"ایده آل گرا",
-      "id": "0cbb"
-    },
-    {
-      "title": "INTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "0b05"
-    },
-    {
-      "title": "INTJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "a388"
-    },
-    {
-      "title": "INFJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "073d"
-    },
-    {
-      "title": "ENTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "b3a4"
-    },
-    {
-      "title": "ENFP",
-      "typeDescription":"ایده آل گرا",
-      "id": "07e3"
-    },
-    {
-      "title": "ISTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "5a8a"
-    },
-    {
-      "title": "ISFP",
-      "typeDescription":"ایده آل گرا",
-      "id": "815c"
-    },
-    {
-      "title": "ENTJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "4f6d"
-    },
-    {
-      "title": "ENFJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "9967"
-    },
-    {
-      "title": "ISTJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "417b"
-    },
-    {
-      "title": "ESTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "2b28"
-    },
-    {
-      "title": "ESTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "c6c9"
-    },
-    {
-      "title": "ESFP",
-      "typeDescription":"ایده آل گرا",
-      "id": "8269"
-    },
-    {
-      "title": "ESEI",
-      "typeDescription":"ایده آل گرا",
-      "id": "2094"
-    },
-    {
-      "title": "ESTI",
-      "typeDescription":"ایده آل گرا",
-      "id": "04f3"
-    }
-  ] ; 
-
     const navigate = useNavigate(); 
     const handleClick = (id:string)=>{
         navigate(`/profile/${id}`)
@@ -123,85 +42,142 @@ export const HomePage : React.FC = () : JSX.Element =>{
 
  var typeSettings = {
     dots: true,
+    dotsClass: "slick-dots slick-thumb",
     infinite: true,
     // slidesToShow: 3,
     // slidesToScroll: 1,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    // initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    slidesToShow: 7,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
     pauseOnHover: true,
-    centerMode: true,
-    centerPadding: "60px",
+    // centerMode: true,
+    // centerPadding: "60px",
+    // rows: 2,
+    // slidesPerRow: 2 ,
     // swipeToSlide: true,
     // rtl: true ,
      responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 5,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true
+          centerMode: false,
         }
       },
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
-          initialSlide: 2
+          centerMode: false,
         }
       },
       {
         breakpoint: 600,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      },
+      {
+        breakpoint: 325,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      },
+      {
+        breakpoint: 225,
+        settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          centerMode: false,
         }
       }
     ]
   };
 
   var settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     // slidesToShow: 3,
     // slidesToScroll: 1,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    // initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    slidesToShow: 6,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    // autoplay: true,
+    // autoplaySpeed: 4000,
     pauseOnHover: true,
-    centerMode: true,
-    centerPadding: "60px",
+    // centerMode: true,
+    // centerPadding: "60px",
     // swipeToSlide: true,
     // rtl: true ,
      responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 5,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true
+          // infinite: true,
+          // dots: true,
+          centerMode: false,
         }
-      },
+      }
+      ,
       {
-        breakpoint: 800,
+        breakpoint: 720,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
-          initialSlide: 2
+          centerMode: false,
         }
-      },
+      }
+      ,
       {
         breakpoint: 600,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      }
+      // ,
+      // {
+      //   breakpoint: 520,
+      //   settings: {
+      //     slidesToShow: 3,
+      //     slidesToScroll: 1,
+      //     centerMode: false,
+      //   }
+      // }
+      ,
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      },
+      {
+        breakpoint: 325,
+        settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          centerMode: false,
         }
       }
     ]
@@ -212,9 +188,32 @@ export const HomePage : React.FC = () : JSX.Element =>{
           career={fame.career}  charProfileUrl={fame.photoUrl} onclick={()=>{handleClick(fame.id)}}/>
               })
         
-        const mbtiType = personalityTypes.map((type)=>{
-                        return <MBTICard typeTitle={type.title} faDescription={type.typeDescription} />
-                        })
+                        const handleSliders = ()=>{
+                          const artistSlider = document.querySelector('.famePeopleWrapper')?.firstElementChild;
+                          artistSlider?.classList.toggle('artistSlider');
+
+                          const typesSlider = document.querySelector('.typesWrapper')?.firstElementChild;
+                          artistSlider?.classList.toggle('typesSlider');
+                          console.log('artist slider',artistSlider)
+                        }
+
+                        handleSliders() ; 
+
+                        const handleButtons = ()=>{
+                          const nextButton = document.querySelector('.slick-prev')
+                          const prevButton = document.querySelector('.slick-next')
+
+                          nextButton?.classList.toggle('slick-prev')
+                          nextButton?.classList.toggle('slick-next')
+
+                          prevButton?.classList.toggle('slick-next')
+                          prevButton?.classList.toggle('slick-prev')
+                          console.log(nextButton)
+                          console.log(prevButton)
+                          
+                        }
+
+                        handleButtons() ; 
 
     return (
         <div className="homePage">
@@ -224,8 +223,8 @@ export const HomePage : React.FC = () : JSX.Element =>{
         <div className="showFamePeople"> 
 
 
-            <div className="titleContainer mb-10 w-[90%]">
-                 <div className="titleWrapper"> <h2 className='title'>افراد معروف</h2> </div> </div>
+            <div className="titleContainer mb-1 w-[100%] sm:w-[90%]">
+                 <div className="titleWrapper py-2 w-[100%] text-6xl sm:w-2/3 lg:w-1/3"> <h2 className='title flex flex-wrap'>افراد معروف</h2> </div> </div>
             
             <div className="famePeopleWrapper">
 
@@ -246,29 +245,22 @@ export const HomePage : React.FC = () : JSX.Element =>{
         <div className="showTypes"> 
 
 
-            <div className="titleContainer mb-10 w-[90%]">
-              <div className="titleWrapper w-[40%]"> <h2 className='title'>تایپ های شخصیتی</h2> </div>    
+            <div className="titleContainer mb-10 w-[100%] sm:w-[90%]">
+              <div className="titleWrapper py-2 w-[100%] text-6xl sm:w-2/3 lg:w-1/3"> <h2 className='title flex flex-wrap'>تایپ های شخصیتی</h2> </div>    
             </div>
             
-            <div className="typesWrapper">
+            <div className="typesWrapper flex flex-col items-center">
 
-                {/* <ul className="typesList">
-                    
-                    {personalityTypes.map((type)=>{
-                        
-                        return <MBTICard typeTitle={type.title} faDescription={type.typeDescription} />
-                
-                        })} 
-
-                  
-
-                </ul> */}
-
-                <Slider {...typeSettings}> {mbtiType} </Slider>
+                {/* <Slider {...typeSettings}> {mbtiType} </Slider>
 
                 <div className="moreButtonWrapper">
                     <Link to={"/personalitytypes"}> <MoreButton /></Link>
-                </div>
+                </div> */}
+
+                <TypeSection typeSectionTitle='تحلیلگران' types={analystsTypes} />
+                <TypeSection typeSectionTitle='دیپلمات' types={diplomatsTypes} />
+                <TypeSection typeSectionTitle='نگهبانان' types={SentinelsTypes} />
+                <TypeSection typeSectionTitle='کاشفان' types={explorersTypes} />
 
             </div>
         
@@ -280,7 +272,7 @@ export const HomePage : React.FC = () : JSX.Element =>{
 
         <div className="qListWrappwe">
 
-            <div className="titleContainer mb-10"> <div className="titleWrapper"> <h2 className='title'>پرسش و پاسخ</h2> </div> </div>
+            <div className="titleContainer mb-10 w-[90%]"> <div className="titleWrapper"> <h2 className='title'>پرسش و پاسخ</h2> </div> </div>
             <ul className="questionList">
                 
            {QAData.map((data)=>{
