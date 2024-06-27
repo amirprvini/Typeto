@@ -22,7 +22,7 @@ export const UserProfile : React.FC <IUserProfileProps> = () : JSX.Element =>{
         console.log("isClicked: " , isCliked);
 
     }
-    return <div className="userProfileButtonWrapper" onClick={handleClick}>
+    return <div className="userProfileButtonWrapper text-white" onClick={handleClick}>
       
             <button className="userProfileButton">
                 <div className="userIconWrapper"> <HiOutlineUserCircle /> </div>

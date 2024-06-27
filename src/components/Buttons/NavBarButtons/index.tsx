@@ -13,7 +13,7 @@ const NavBarButton : React.FC<NavBarButtonProps> = ({faTitle,enTitle,icon,onClic
         <div className="navBarIcon">{icon}</div>
         
         <div className="buttonTitles">
-        <div className="farsiTitle">{faTitle}</div>
+        <div className="farsiTitle text-white">{faTitle}</div>
         <div className="englishTitle">{enTitle}</div>
         
         </div>

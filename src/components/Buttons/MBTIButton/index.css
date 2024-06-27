@@ -2,13 +2,9 @@
     
     background-color: black;
     border-radius: .5rem;
-    padding-left: .5rem;
     justify-content: center;
-    border: 2px solid rgba(0, 206, 203, 0.2) ;
-    height: 50px;
+    /* border: 2px solid rgba(0, 206, 203, 0.2) ; */
     font-size: 1.2rem;
-    display: flex;
-    align-items: center;
     width: 100%;
 
 }

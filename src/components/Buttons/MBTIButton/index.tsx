@@ -21,7 +21,7 @@ const MBTIButton : React.FC<IMBTIButton> = ({typeTitle,onCompleteButton}) : JSX.
     } 
 
     return ( 
-        <div className="MBTIButton cursor-pointer" onClick={handleClick}>
+        <div className="MBTIButton w-full h-10 cursor-pointer flex justify-center items-center" onClick={handleClick}>
 
             <p className="MBTIButtonTitle"> {typeTitle} </p>
 
