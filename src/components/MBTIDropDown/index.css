@@ -1,5 +1,5 @@
 .dropDownWrapper{
-    width: 100%;
+    /* width: 60%; */
     display: flex;
     justify-content: flex-start;
 }
@@ -26,6 +26,8 @@
 
 .typesList{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+}
+
+.arrowWrapper.active{
+    transform: rotate(-180deg);
 }
