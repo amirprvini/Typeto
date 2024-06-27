@@ -34,11 +34,11 @@ export const BurgurNavBar : React.FC<BurgurNavBarProps> = forwardRef(({isClicked
             EnTitle : "FAMOUS PEOPLE" ,
             Icon : <TbWorldHeart />  
         },
-        {
-            FaTitle : "میم ها" ,
-            EnTitle : "MEMES" ,
-            Icon : <FaRegLaughSquint />  
-        },
+        // {
+        //     FaTitle : "میم ها" ,
+        //     EnTitle : "MEMES" ,
+        //     Icon : <FaRegLaughSquint />  
+        // },
         {
             FaTitle : "تماس با ما" ,
             EnTitle : "CONTACT" ,
@@ -52,19 +52,19 @@ export const BurgurNavBar : React.FC<BurgurNavBarProps> = forwardRef(({isClicked
     const handleCloseBtn = ()=>{
         burgurNav?.classList.toggle('animate-closeNavBar') ;
         burgurNav?.classList.toggle('animate-openNavBar') ;
-        burgurNav?.classList.toggle('hidden') ;  
+        burgurNav?.classList.add('hidden') ;  
     }
 
   return (
-    <div ref={ref} className='burgurNavBarWrapper hidden  space-y-5 w-30 h-screen bg-black fixed top-0 right-0 '>
+    <div ref={ref} className='burgurNavBarWrapper hidden z-20 space-y-5 w-30 h-screen bg-black fixed top-0 right-0 '>
 
-        <div className="closeNavBarWrapper py-1 px-2 text-8 w-full flex justify-end">
+        <div className="closeNavBarWrapper py-1 px-2 text-12 w-full flex justify-end">
             <div className="closeNavBarButton" onClick={handleCloseBtn}>
                 <IoIosClose />
             </div>
         </div>
       
-      <ul className="burgurNavBarList flex flex-col space-y-5 w-3/4 text-2xl">
+      <ul className="burgurNavBarList flex flex-col space-y-9 w-3/4 text-2xl">
         {NavBarBtnData.map((item)=>{
             return <li className='w-full' key={item.EnTitle}>
                 <Link to={"/" + item.EnTitle.toLowerCase().split(" ").join("")}> <NavBarButton faTitle={item.FaTitle} enTitle={item.EnTitle} icon={item.Icon}/> </Link>

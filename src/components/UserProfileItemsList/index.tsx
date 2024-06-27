@@ -63,7 +63,7 @@ export const UserProfileItemsList : React.FC<UserProfileItemsList> = ({setVal}) 
   }
 };
 
-    return <div className="userProfileItemsListWrapper" >
+    return <div className="userProfileItemsListWrapper my-4" >
         
         <div className="avatarWrapper">
         <UserAvatar avatarUrl={image} />

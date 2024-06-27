@@ -23,6 +23,7 @@ interface AddCommentSectionProps {
 
 export type artistType = {
     name : string ,
+    faName : string , 
     id : string , 
     career : string ,
     type : string ,

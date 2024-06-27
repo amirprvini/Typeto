@@ -27,11 +27,11 @@ const Header : React.FC<IHeaderProps>  = ({isAthenticated=false}) : JSX.Element 
     }
 
     return (
-        <div className="header w-full bg-black text-black flex flex-col justify-center items-center">
+        <div className="header sticky top-0 w-full z-10 bg-black text-black flex flex-col justify-center items-center">
             <div className="topHeader w-4/5 h-26 bg-black text-white flex justify-between items-center py-[.5rem] px-[1rem]">
 
                     <div className="logo cursor-pointer flex h-full" onClick={handleClick} >
-                        <div className="logoTitleWrapper w-full h-full flex flex-col items-start justify-start text-[2rem]">
+                        <div className="logoTitleWrapper w-full h-full flex flex-col items-start justify-start text-[2rem] text-white">
                             <h1 className="logoTitle font-serif">TYPETO.NET</h1>
                             <h3 className="logoDescription text-white">تایپتو انتخاب کن !</h3>
                             </div>
@@ -40,15 +40,14 @@ const Header : React.FC<IHeaderProps>  = ({isAthenticated=false}) : JSX.Element 
                         </div>
                     </div>
 
-                    {user?.isAuthenticated ?  <UserProfile/> : <div className="topHeaderButtonsWrapper w-1/3 flex items-center justify-center space-x-4 space-y-4">
+                    {/* {user?.isAuthenticated ?  <UserProfile/> : <div className="topHeaderButtonsWrapper w-1/3 flex items-center justify-center space-x-4 space-y-4">
                         <Link to="/signUp"> <TopHeaderButton title="ثبت نام | ورود" icon={<CgLogIn />}/> </Link>
-                        {/* <Link to="/login"> <TopHeaderButton title="وارد شوید" /> </Link> */}
-                    </div>}
+                    </div>} */}
 
 
                 </div>
 
-                <div className="navBarWrapper w-full h-24 flex justify-center items-center ">
+                <div className="navBarWrapper sticky top-0 w-full h-24 flex justify-center items-center ">
                     <NavBar/>
                 </div>
         </div>

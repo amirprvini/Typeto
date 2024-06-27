@@ -25,7 +25,7 @@ interface EditUSerInfoProps {
 
 const validationSchema = yup.object({
   username : yup.string().required('لطفا نام کاربری خود را وارد کنید!') ,
-  email : yup.string().required('لطفا نام کاربری خود را وارد کنید!'),
+  email : yup.string().required('لطفا ایمیل خود را وارد کنید!'),
 })
 const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues}) : JSX.Element => {
 
@@ -113,12 +113,13 @@ const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues}) : JSX.Element
 
               <TextInput placeHolderStr={user.username}  lable='* نام کاربری' type='text' onchange={formik.handleChange} inputValue={formik.values.username} inputId='username'  />
               <TextInput placeHolderStr={user.email}  lable='ایمیل' type='email' onchange={formik.handleChange} inputValue={formik.values.email} inputId='email'  />
+              
               <DropDown onCompleteDropDown={(type)=>{
                 setDropState(type) ; 
-              }} />
+              }}  widthProp='3/5' justifyProp='start'/>
 
-              <div className="confirmBtnWrapper">
-                <ConfirmButton title='تایید اطلاعات کاربری' typeProp={'submit'} />
+              <div className="confirmBtnWrapper mt-20">
+                <ConfirmButton title='تایید اطلاعات کاربری' typeProp={'submit'} widthProp='3/5'/>
               </div>
 
             </form>
@@ -133,10 +134,11 @@ const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues}) : JSX.Element
     return (
      <div className='editUserInfoWrapper'>
 
-        <form onSubmit={formik.handleSubmit} className='editUserInfo'>
+        <form onSubmit={formik.handleSubmit} className='editUserInfo flex flex-wrap flex-col justify-start items-center '>
 
               <TextInput placeHolderStr='نام کاربری خود را وارد کنید.'  lable='* نام کاربری' type='text' onchange={formik.handleChange} inputValue={formik.values.username} inputId='username'  />
               <TextInput placeHolderStr='ایمیل خود را وارد کنید.'  lable='ایمیل' type='email' onchange={formik.handleChange} inputValue={formik.values.email} inputId='email'  />
+              
               <DropDown onCompleteDropDown={(type)=>{
                 setDropState(type) ; 
               }} />

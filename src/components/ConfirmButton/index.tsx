@@ -6,11 +6,12 @@ interface ConfirmButtonProps {
     title: string ;
     typeProp ?: any
     onclick ?: ()=> void  
+    widthProp ?: string
 }
 
-const ConfirmButton : React.FC<ConfirmButtonProps> = ({title,typeProp,onclick}) : JSX.Element => {
+const ConfirmButton : React.FC<ConfirmButtonProps> = ({title,typeProp,onclick,widthProp}) : JSX.Element => {
   return (
-    <button className='confirmBtn' type={typeProp} onClick={onclick}>
+    <button className={`confirmBtn w-${widthProp}`} type={typeProp} onClick={onclick}>
         {title}
     </button>
   )

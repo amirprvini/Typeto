@@ -7,17 +7,20 @@ interface IFamePeopleCard {
     career ?: string ,
     charProfileUrl ?: string 
     id?:string,
-    onclick ?: ()=> void
+    onclick ?: ()=> void, 
+    scale ?: number , 
+    scaleX ?: number , 
+    scaleY ?: number , 
     
 }
 
 
-const FamePeopleCard : React.FC<IFamePeopleCard> = ({charName,charType,career,charProfileUrl,id,onclick}) : JSX.Element =>{
+const FamePeopleCard : React.FC<IFamePeopleCard> = ({charName,charType,career,charProfileUrl,id,onclick,scaleX,scaleY,scale}) : JSX.Element =>{
     
     
     
     return ( 
-        <div className="famePeopleCard cursor-pointer" onClick={onclick}>
+        <div className={`famePeopleCard cursor-pointer scale-${scale}`} onClick={onclick}>
             <div className="charType"> <h3 className="charTypeTitle">{charType}</h3> </div>
             <div className="charInfo">
              <h2 className="charName">{charName}</h2>
