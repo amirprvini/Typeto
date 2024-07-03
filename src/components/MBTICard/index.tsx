@@ -33,9 +33,9 @@ const MBTICard : React.FC<IMBTICard> = ({typeTitle,faTitle,description,
             </div>
              */}
              
-            <div className="symbolWrapper h-[250px]">
-                <img src={'./images/' + typeTitle + '.jpg'} alt={typeTitle + '-Symbol'} width='150px' height='250px' />
-            </div>
+            {/* <div className="symbolWrapper ">
+                <img src={'./images/' + typeTitle + '.png'} alt={typeTitle + '-Symbol'} width='150px' height='250px' />
+            </div> */}
 
             <div className="EnTitleWrapper w-full h-1/4 flex justify-center">
                 <p className="mbtiCard-EnTitle"> {typeTitle} </p>
