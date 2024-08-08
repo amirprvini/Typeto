@@ -1,52 +1,54 @@
 import './index.css'
-import React, { useRef, useState } from 'react'
-import { AiFillLike,AiFillDislike } from "react-icons/ai";
+import React, {useState } from 'react'
+import { BiLike,BiDislike ,BiSolidDislike , BiSolidLike} from "react-icons/bi";
 
-
-
-interface CounterTracker {
-  increment: number;
-  decrement: number;
+interface LikeAndDislikeProps {
+    likeCount: number ,
+    disLikeCount : number , 
+    likeComplete : (num:number)=>void ,
+    disLikeComplete : (num:number)=>void ,
+    likeColor : string ,  
+    disLikeColor : string
 }
 
+export const LikeAndDislike :React.FC <LikeAndDislikeProps> = ({likeCount,disLikeCount,likeComplete,disLikeComplete,likeColor,disLikeColor}) : JSX.Element =>{
 
-export const LikeAndDislike :React.FC = () : JSX.Element =>{
+    const [likeClicked,setLikeClicked] = useState<number>(0);
+    const [disLikeClicked,setDisLikeClicked] = useState<number>(0);
 
-    const ref = React.useRef<CounterTracker>({
-    increment: 0,
-    decrement: 0,
-  });
-
-  const [likeState,setLikeState] = useState<number>();
-  const [disLikeState,setDisLikeState] = useState<number>();
-    
     const handleIncrement = ()=>{
-        ref.current.increment += 1 ;
-        setLikeState(ref.current.increment);
+        setLikeClicked(likeClicked => likeClicked+1)
     }
 
-    const handleDecrement = ()=>{
-        ref.current.decrement += 1 ;
-        setDisLikeState(ref.current.decrement)
+    const handledecrement = ()=>{
+        setDisLikeClicked(disLikeClicked => disLikeClicked+1)
     }
 
-    return <div className="like-Dislike-Wrapper">
 
-            <button className="disLikeWrapper">
+    return <div className="like-Dislike-Wrapper text-black">
+
+            <button className="disLikeWrapper"  onClick={()=>{
+                     handledecrement()
+                     disLikeComplete(disLikeClicked);
+                }} >
                 
-                <div className="disLikeCounter"> {disLikeState} </div>
-                <div className="disLikeIconWrapper " onClick={handleDecrement}>
-                    <AiFillDislike  />
+                <div className="disLikeCounter font-bold"> {disLikeCount} </div>
+
+                <div className={`disLikeIconWrapper`} >
+                    { disLikeColor==="white" ? <BiDislike /> : <BiSolidDislike /> }
                 </div>
 
             </button>
 
-            <button className="likeWrapper">
+            <button className="likeWrapper" onClick={()=>{
+                     handleIncrement();
+                     likeComplete(likeClicked);
+                }} >
 
-                <div className="likeCounter"> {likeState} </div>
+                <div className="likeCounter font-bold"> {likeCount} </div>
                
-                <div className="likeIconWrapper" onClick={handleIncrement}>
-                    <AiFillLike />
+                <div className={`likeIconWrapper`}>
+                    { likeColor==="white" ? <BiLike /> : <BiSolidLike /> }
                 </div>
 
             </button>
