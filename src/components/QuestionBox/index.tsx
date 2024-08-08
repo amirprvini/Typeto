@@ -15,20 +15,13 @@ const QuestionBox : React.FC<IQuestionBoxProps>  = ({Qestion,Answer,onclick}) : 
     const [showMore, setShowMore] = useState(false);
 
     const handleQusetionBox = ()=>{
-
-            // if(state==true)
-            //     setState(false);
-            // else
-
-                setShowMore(!showMore);
-
-
+        setShowMore(!showMore);
     }
 
     return (
-        <div className="questionBox" onClick={handleQusetionBox}>
+        <div className="questionBox flex flex-col gap-3 text-blac shadow-2xl rounded-lg py-4 px-3 text-base text-black bg-gray-200" onClick={handleQusetionBox}>
 
-            <div className="questionWrapper"> <div className="questionIcon"> {showMore ? <IoIosArrowDown /> : <IoIosArrowBack />} </div> <p className="questionTitle"> {Qestion} </p> </div>
+            <div className="questionWrapper flex font-extrabold"> <div className="questionIcon flex items-center"> {showMore ? <IoIosArrowDown /> : <IoIosArrowBack />} </div> <p className="questionTitle"> {Qestion} </p> </div>
 
             <div className="answerWrapper">
                 {showMore &&  <p className="answerTitle"> {Answer} </p>} </div>
