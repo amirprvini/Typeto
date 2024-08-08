@@ -14,13 +14,11 @@
 
 .signUpPage .VerifyFormContainer {
 
-    
-    width: 35%;
     height: 300px;
     padding: 1rem .1rem ;
-    background-color: black;
-    border: 1px solid rgba(0, 206, 203, 0.3);
-    color: white;
+    background-color: white;
+    /* border: 1px solid rgba(0, 206, 203, 0.3); */
+    color: black;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -93,43 +91,8 @@
 
 /* -------------------------------------Media Query-------------------------------------- */
 
-@media screen and (max-width : 855px) {
- 
-    .VerifyFormContainer{
-        width: 50%;
-    }
-    
-}
-
-
-@media screen and (max-width : 680px) {
- 
-     .VerifyFormContainer{
-        width: 60%;
-    }
-}
-
-@media screen and (max-width : 570px) {
- 
-     .VerifyFormContainer{
-        width: 70%;
-    }
-}
-
-
-@media screen and (max-width : 480px) {
- 
-     .VerifyFormContainer{
-        width: 80%;
-    }
-}
-
 @media screen and (max-width : 425px) {
  
-     .VerifyFormContainer{
-        width: 80%;
-    }
-
     .formButtons{
         scale: .8;
     } 

@@ -1,29 +1,20 @@
 import FormInput from '../../../components/Inputs/FormInput';
 import './index.css'
 import {TiUserAdd} from "react-icons/ti"
-import {CgLogIn} from "react-icons/cg"
-import { FormProps, Link, useAsyncError, useNavigate } from 'react-router-dom';
 import TopHeaderButton from '../../../components/Buttons/TopHeaderButton'; 
 import { useFormik } from "formik";
-import { AXIOS } from '../../../config/axios.config';
-import { API_URLS } from '../../../constants/api.urls';
-import { useContext, useEffect, useRef, useState } from 'react';
 import * as yup from 'yup' ;
-import { AppContext } from '../../../components/context/store';
-import { loginFormType } from '../../../types/user.types';
 import { tokensType } from '../../../types/tokens.type';
 import { IUserState } from '../../../components/context/types/context.types';
-let property : string ;
+import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
- const SignUpInputsData = [
 
-        {
+ const SignUpInputsData = {
             Title : "confirmCode" ,
             PlaceHolder : "کد تایید را وارد کنید." ,
-            Type : "tell"
-        },
-    
-    ]
+            Type : "tel"
+        }
 
     const validationSchema = yup.object({
         confirmCode : yup.string().required("کد تایید را وارد کنید."),
@@ -37,23 +28,10 @@ let property : string ;
 
 export const VerifyStep : React.FC<userInfo> = ({userInfo,onComplete}) : JSX.Element =>{
 
-    // const {user,setUser} = useContext(AppContext);
-    const {update,setUpdate} = useContext(AppContext)
-
     const ref = useRef<any>(null);
 
     type VerifyFormProps = {
         confirmCode : string
-    }
-
-    type verfiedUser = {
-        // username : string ; 
-        // email : string ;
-        phoneNumber : string ;
-        // password : string ;
-        // confirmPassword : string ;
-        // token : string ;
-        // isAuthenticated : boolean
     }
 
     
@@ -87,51 +65,40 @@ export const VerifyStep : React.FC<userInfo> = ({userInfo,onComplete}) : JSX.Ele
     const navigate = useNavigate();
 
         const handleClick = async ()=>{
-           
-            // console.log('in verify step: ' , user) ; 
             navigate("/home");
-
         }
-
-
-        // useEffect(()=>{
-            
-        //     // console.log("in useEffect!!!!!!!");
-        //     // console.log("update in useEffect!!!!!!!",update);
-
-        // },[update])
 
 
     return (
         <div className="signUpPage"> 
         
-        <div className="VerifyFormContainer">
+        <div className="VerifyFormContainer w-[90%] sm:w-3/5 lg:w-1/2 2xl:w-2/5 shadow-2xl">
 
             <div className="signUpTitleWrapper">
                 
-                <h2 className='title text-gray-300'>ثبت نام در تایپتو</h2>
+                <h2 className='title text-gray-400'>ثبت نام در تایپتو</h2>
                 
-                <div className="descriptionWrapper">
-                    <p className="description">کد تایید پیامک شده را وارد کنید!</p>
+                <div className="descriptionWrapper mt-4">
+                    <p className="description">کد تایید پیامک شده به شماره {userInfo?.phoneNumber?.slice(8,11) + "****" + userInfo?.phoneNumber?.slice(0,4)} را وارد کنید!</p>
                 </div>
 
             </div>
 
-            <form onSubmit={formik.handleSubmit} className='form'>
+            <form onSubmit={formik.handleSubmit} className='form px-4'>
                 
-                {SignUpInputsData.map((input)=>{
-                    property = input.Title ;
-                    return <li key={input.Title} > 
-                    <FormInput ref={ref} title={input.Title} placeHolderStr={input.PlaceHolder} 
-                    type={input.Type}  onchange={formik.handleChange} formValue={formik.values.confirmCode} inputId={input.Title}/> </li>
-                })}
+                <FormInput ref={ref} title={SignUpInputsData.Title} placeHolderStr={SignUpInputsData.PlaceHolder} 
+                    type={SignUpInputsData.Type}  onchange={formik.handleChange} formValue={formik.values.confirmCode} inputId={SignUpInputsData.Title}/>
 
+
+                {
+                formik.errors.confirmCode && formik.touched && <div className="verifyErrorTitleWrapper w-full flex justify-start px-4">
+                    <h6 className='verifyErrorTitle text-red-600'>*{formik.errors.confirmCode}</h6>
+                </div>
+                }
 
                 <div className="verifyFormButtons">
 
-                    {/* <Link to="/login"> <TopHeaderButton title="ورود" icon={<CgLogIn />} /> </Link> */}
-                    <TopHeaderButton title="تایید" buttonType={"submit"} icon={<TiUserAdd />}/>
-                    {/* <TopHeaderButton title="تایید" buttonType={"submit"} icon={<TiUserAdd />}/> */}
+                    <TopHeaderButton title="تایید" buttonType={"submit"} icon={<TiUserAdd />} color='black'/>
                 
                 </div>
 

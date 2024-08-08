@@ -43,9 +43,6 @@ export const SignUpPage : React.FC = () : JSX.Element =>{
 
         // 3) set user Info in context api
 
-
-        console.log("balaye setUser hastam!!!" ,user)
-
         setState({
                 avatar : '' , 
                 username : '' , 
@@ -57,9 +54,6 @@ export const SignUpPage : React.FC = () : JSX.Element =>{
                 ...tokens
         })
 
-
-        console.log('state after second set: ' , state) ; 
-
         setUser({
                     avatar : '' , 
                     username : '' , 
@@ -70,9 +64,6 @@ export const SignUpPage : React.FC = () : JSX.Element =>{
                     id: state?.id || '' ,  
                     ...tokens
                     })
-
-                    console.log('after setuser in onCompelete');
-                    
 
 
         localStorage.setItem("access",tokens.access);
@@ -88,8 +79,6 @@ export const SignUpPage : React.FC = () : JSX.Element =>{
                     ...tokens
                 
             }));
-
-        console.log("paeen setUser hastam!!!" ,user)
 
         loginMutation.mutate(
             {
@@ -118,8 +107,6 @@ export const SignUpPage : React.FC = () : JSX.Element =>{
 
     }
 
-    console.log("global user in sign Up: ",user)
-    
     return((()=>{
         
         switch(step){
@@ -132,7 +119,7 @@ export const SignUpPage : React.FC = () : JSX.Element =>{
             }}/>
 
             case SingUPPageSteps.VerifyStep :
-            return <VerifyStep  onComplete={(tokens)=>{
+            return <VerifyStep userInfo={state} onComplete={(tokens)=>{
             setState({
                 avatar : '' , 
                 username : '' , 
