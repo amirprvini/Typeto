@@ -3,5 +3,6 @@ export const ReactQueryKeys = {
     GetArtists:'GetArtists', 
     GetAllArtists:'GetAllArtists',
     NewComment:'NewComment',
-    ConfirmUser:'ConfirmUser'
+    ConfirmUser:'ConfirmUser',
+    GetUser : 'GetUser'
 }
