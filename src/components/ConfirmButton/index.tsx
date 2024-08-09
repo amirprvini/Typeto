@@ -1,6 +1,4 @@
 import React from 'react'
-import './index.css'
-
 
 interface ConfirmButtonProps {
     title: string ;
@@ -9,9 +7,9 @@ interface ConfirmButtonProps {
     widthProp ?: string
 }
 
-const ConfirmButton : React.FC<ConfirmButtonProps> = ({title,typeProp,onclick,widthProp}) : JSX.Element => {
+const ConfirmButton : React.FC<ConfirmButtonProps> = ({title,typeProp,onclick,widthProp='10'}) : JSX.Element => {
   return (
-    <button className={`confirmBtn w-${widthProp}`} type={typeProp} onClick={onclick}>
+    <button className={`confirmBtn w-${widthProp} rounded-lg py-2 px-6 bg-black text-white font-semiBold text-lg`} type={typeProp} onClick={onclick}>
         {title}
     </button>
   )

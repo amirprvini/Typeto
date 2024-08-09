@@ -4,12 +4,10 @@ import NavBarButton from '../Buttons/NavBarButtons'
 import { HiOutlineHome } from "react-icons/hi2";
 import { GiBrain } from "react-icons/gi";
 import { TbWorldHeart } from "react-icons/tb";
-import { FaRegLaughSquint } from "react-icons/fa";
 import { GrContact } from "react-icons/gr";
 import SearchInput from '../Inputs/SearchInput';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { ProfilePage } from '../../pages/ProfilePage';
 import { UserProfile } from '../Buttons/UserProfile';
 import { createPortal } from 'react-dom';
 import { BurgurNavBar } from '../BurgurNavBar';
@@ -77,6 +75,14 @@ const NavBar : React.FC<NavBarProps> = ({isAthenticated = true}) : JSX.Element =
         setDisplay("hidden") ; 
     }
 
+    const navigate = useNavigate();
+
+    const handleHeaderBtnClick = (str:string)=>{
+        console.log('str' , str) ; 
+        navigate(str)
+        window.scrollTo(0,0);
+    }
+
 
   return (
     <nav className="navBar">
@@ -89,15 +95,15 @@ const NavBar : React.FC<NavBarProps> = ({isAthenticated = true}) : JSX.Element =
       )}
         
         </div>
+        
         <div className="navBarRight">
 
           <ul className="navBarItems">
          {NavBarBtnData.map((item)=>{
-            
-            console.log(item.EnTitle.toLowerCase().split(" ").join(""))
 
             return <li key={item.EnTitle}> 
-                <Link to={"/" + item.EnTitle.toLowerCase().split(" ").join("")}> <NavBarButton faTitle={item.FaTitle} enTitle={item.EnTitle} icon={item.Icon}/> </Link>
+                <NavBarButton faTitle={item.FaTitle} enTitle={item.EnTitle} icon={item.Icon} 
+                onClickFunction = {()=>{handleHeaderBtnClick("/" + item.EnTitle.toLowerCase().split(" ").join(""))}}/>
             </li>
 
              })}
@@ -106,10 +112,9 @@ const NavBar : React.FC<NavBarProps> = ({isAthenticated = true}) : JSX.Element =
         
         </div>
 
-        <div className="searchBarWrapper relative flex items-center justify-center space-y-10" 
+        <div className="searchBarWrapper relative flex items-center justify-start space-y-10" 
         onMouseDown={handleMouseDown} onMouseLeave={handleMouseOut} >
             <SearchInput onComplete={(filteredArtists:artistType[])=>{
-                console.log('filtered Artists in parent: ' , filteredArtists) ;
                 setResult(filteredArtists) ;  
             }} ref={inputRef} stateProp={inputState} setStatePropFunc={(str)=>setInputState(str)}/>
             <SearchResults artistsList={result} setInpState={setInputState}
@@ -117,7 +122,7 @@ const NavBar : React.FC<NavBarProps> = ({isAthenticated = true}) : JSX.Element =
         </div>
         
         {user?.isAuthenticated ?  <UserProfile/> : <div className="topHeaderButtonsWrapper w-1/3 flex items-center justify-center space-x-4 space-y-4">
-                        <Link to="/signUp"> <TopHeaderButton title="ثبت نام | ورود" icon={<CgLogIn />}/> </Link>
+                        <Link to="/signUp"> <TopHeaderButton title="ثبت نام | ورود" icon={<CgLogIn />} scaleProp='75'/> </Link>
                         {/* <Link to="/login"> <TopHeaderButton title="وارد شوید" /> </Link> */}
                     </div>}
 

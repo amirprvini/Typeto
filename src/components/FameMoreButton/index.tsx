@@ -12,6 +12,7 @@ const FameMoreButton : React.FC<IFameMoreButton> = ({title}) : JSX.Element =>{
     const navigate = useNavigate();
     const handleClick = ()=>{
         navigate("/famepeopletypes/" + title)
+        window.scrollTo(0,0);
     }
 
     return (

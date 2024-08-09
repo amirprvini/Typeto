@@ -4,14 +4,18 @@ import { FaTelegram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import FormInput from "../../Inputs/FormInput";
-import NavBarButton from "../../Buttons/NavBarButtons";
-import { Link, useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import FooterButton from "../../Buttons/FooterButton";
 
 interface IFooterProps  {}
 
 const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
-
+    
+    const navigate = useNavigate() ;
+    const handleFooerBtn = (str:string)=>{
+        navigate("/" + str);
+        window.scrollTo(0,0) ; 
+    }
      const TopTopicsData = [
         {
             FaTitle : "تایپ های شخصیتی" ,
@@ -20,11 +24,7 @@ const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
         {
             FaTitle : "افراد معروف" ,
             EnTitle : "FAMOUS PEOPLE" ,
-        },
-        {
-            FaTitle : "میم ها" ,
-            EnTitle : "MEMES" ,
-        },
+        }
     ]
 
     const typetoFamData = [
@@ -35,11 +35,11 @@ const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
     ]
 
     return (
-        <div className="footer">
+        <div className="footer my-4 pt-4 pb-8">
 
-        <div className="footerWrapper">
+        <div className="footerWrapper w-[95%] sm:w-4/5 flex flex-col sm:flex-row justify-between">
 
-        <div className="right">
+        <div className="right w-[90%] sm:w-3/5">
 
             <div className="topTopics">
 
@@ -48,8 +48,7 @@ const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
                 <ul className="topTopicsList">
 
                     {TopTopicsData.map((data)=>{
-                        return <Link to={"/" + data.EnTitle.toLowerCase().split(" ").join("")}>  
-                        <li className="topTopicItem"> <FooterButton faTitle={data.FaTitle} /> </li> </Link>
+                        return <li className="topTopicItem"> <FooterButton faTitle={data.FaTitle} onClickFunction={()=>{handleFooerBtn(data.EnTitle.toLowerCase().split(" ").join(""))}} /> </li>
                     })}
                     
 
@@ -64,8 +63,7 @@ const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
                 <ul className="topTopicsList">
 
                     {typetoFamData.map((data)=>{
-                        return <Link to={"/" + data.EnTitle.toLowerCase().split(" ").join("")}>  
-                        <li className="typetoFamItem" key={data.EnTitle}> <FooterButton faTitle={data.FaTitle} /> </li> </Link>
+                        return <li className="typetoFamItem" key={data.EnTitle}> <FooterButton faTitle={data.FaTitle} onClickFunction={()=>{handleFooerBtn(data.EnTitle.toLowerCase().split(" ").join(""))}}/> </li>
                     })}
                     
 
@@ -76,7 +74,7 @@ const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
         </div>
 
 
-        <div className="left">
+        <div className="left w-full sm:w-2/5 flex justify-center flex-row sm:flex-col">
 
             <div className="socialMedias">
 
@@ -96,13 +94,13 @@ const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
 
             </div>
 
-            <div className="sendEmail">
+            {/* <div className="sendEmail">
 
                     <div className="emailIcon"><MdEmail /></div>
                     <FormInput type="text" title="sendEmail" placeHolderStr="ایمیل خود را وارد کنید."/>
                     <button className="cnofirmButton">تایید</button>
 
-                </div>
+            </div> */}
 
         </div>
 

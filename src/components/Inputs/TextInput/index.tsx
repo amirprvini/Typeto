@@ -9,10 +9,12 @@ interface TextInputProps {
     onchange ?: any ;
     inputValue ?: any ; 
     inputId ?: string ; 
+    bgColor ?: string ;
+    textColor ?: string ;   
 }
 
 const TextInput : React.FC<TextInputProps> = ({lable,title,placeHolderStr,type
-  ,onchange,inputValue,inputId}) :JSX.Element => {
+  ,onchange,inputValue,inputId,bgColor='black' , textColor='white'}) :JSX.Element => {
   return (
     <div className='textInputWrapper'>
 
@@ -22,7 +24,7 @@ const TextInput : React.FC<TextInputProps> = ({lable,title,placeHolderStr,type
                 <p className="lable">{lable}</p>
             </div>
 
-            <input className='userTextInput' type={type} placeholder={placeHolderStr}
+            <input className={`userTextInput bg-${bgColor} text-${textColor}`} type={type} placeholder={placeHolderStr}
              onChange={onchange} value={inputValue} id={inputId} />
 
         </div>

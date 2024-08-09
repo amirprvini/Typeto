@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import { MBTICardType } from "../../types/mbtiCard.types";
 import MBTICard from "../MBTICard";
+import { useNavigate } from "react-router-dom";
 
 interface typeSecProp {
     typeSectionTitle : string 
@@ -8,6 +9,8 @@ interface typeSecProp {
 }
 const TypeSection : React.FC<typeSecProp> = ({typeSectionTitle,types}) : JSX.Element =>{
 
+
+  const navigate  = useNavigate();
 
     var typeSettings = {
     // dots: true,
@@ -51,12 +54,15 @@ const TypeSection : React.FC<typeSecProp> = ({typeSectionTitle,types}) : JSX.Ele
     ]
   };
 
+  const handleClick = (type:string)=>{
+        navigate("/personalitytypes/" + type);
+        window.scrollTo(0,0);
+  }
+
     const mbtiType = types.map((item:MBTICardType)=>{
-                     return <MBTICard typeTitle={item.type}
-                        faTitle={item.faTitle} description={item.description} /> })
-
-
-    console.log('mbtiType in sec: ' , mbtiType);
+          return <MBTICard typeTitle={item.type}
+          faTitle={item.faTitle} description={item.description}
+          onclick={()=>{handleClick(item.type)}} /> })
 
     return <div className="typeSection w-4/5">
 
@@ -65,7 +71,7 @@ const TypeSection : React.FC<typeSecProp> = ({typeSectionTitle,types}) : JSX.Ele
         </div>
         
 
-        <div className="typesWrapper w-3/5 mb-10">
+        <div className="typesWrapper w-full mb-10">
             
 
             <Slider {...typeSettings}> {mbtiType} </Slider>

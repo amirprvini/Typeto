@@ -17,12 +17,8 @@ interface IHeaderProps extends React.PropsWithChildren  {
 
 const Header : React.FC<IHeaderProps>  = ({isAthenticated=false}) : JSX.Element =>{
 
-    const {user} = useContext(AppContext);
-
     const navigate = useNavigate();
-
     const handleClick = ()=>{
-       
         navigate("/");
     }
 

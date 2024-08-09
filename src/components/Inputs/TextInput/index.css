@@ -1,12 +1,11 @@
 .textInputWrapper{
-    width: 60%;
-    height: 120px;
+    width: 80%;
+    height: 90px;
 }
 
 .textInputContainer{
     display: flex;
     flex-direction: column;
-    /* font-size: 1.5rem; */
     width: 100%;
     gap: .5rem;
 }
@@ -25,11 +24,8 @@
     width: 100%;
     height: 40px;
     padding: .1rem .3rem;
-    background-color: black;
     border-radius: .7rem;
-    border: 1px solid white;
-    /* border: 1px solid rgba(0, 206, 203, 0.627); */
-    /* color: rgba(0, 206, 203, 0.627); */
+    border: 1px solid gray;
     display: flex;
     align-items: center;
     font-size: .8rem;

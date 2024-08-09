@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import './index.css' ; 
 
 interface IMBTICard {
@@ -7,33 +6,24 @@ interface IMBTICard {
     faTitle ?: string ,
     description ?: string ,
     imgUrl ?: string , 
-    widthProp ?: number 
+    widthProp ?: string 
+    onclick ?: ()=> void 
 }
 
 const MBTICard : React.FC<IMBTICard> = ({typeTitle,faTitle,description,
-    imgUrl}) : JSX.Element =>{
+    imgUrl,onclick,widthProp='[93%]'}) : JSX.Element =>{
    
-   const navigate = useNavigate() ; 
-   
-    const handleClick = ()=> {
-     
-        navigate("/personalitytypes/" + typeTitle)
-
-    } 
-
-    console.log('type title in card: ' , faTitle)
-
     return ( 
-        <div className="mbtiCard w-[95%] cursor-pointer flex flex-col justify-start space-y-5 px-4 py-2" onClick={handleClick}>
+        <div className={`mbtiCard w-${widthProp} mr-1 cursor-pointer flex flex-col justify-start space-y-5 px-4 py-2`} onClick={onclick}>
 
             {/* <div className="faTitleWrapper h-1/4 flex items-start">
                 <p className="faTitle">
                     {faTitle}
                 </p>
-            </div>
-             */}
+            </div> */}
+            
              
-            {/* <div className="symbolWrapper ">
+            {/* <div className="symbolWrapper h-96">
                 <img src={'./images/' + typeTitle + '.png'} alt={typeTitle + '-Symbol'} width='150px' height='250px' />
             </div> */}
 

@@ -10,30 +10,27 @@ import MBTICard from '../../MBTICard';
 import Slider from 'react-slick';
 import DropDown from '../../MBTIDropDown';
 
-const ArtistSideBar = () => {
+interface ArtistSideBarProps {
+  cardScale?: number
+}
+
+const ArtistSideBar : React.FC<ArtistSideBarProps> = ({cardScale=100}) : JSX.Element => {
 
   const param = useParams() ;
-  console.log('param in relative Profiles: ' , param.id) ;
-
   const {data} = UseArtistQuery(param.id || '') ;
-  
-  console.log('this Artist: ' , data) ; 
-
   const AllArtists = UseAllArtistQuery();
 
     let count = 1 ;
     const FilterArtists = AllArtists.data?.filter((artist)=>{
-        if(count <=10 && artist.type === data?.type){
+        if(count <=10 && artist.type === data?.type && artist.id !== data.id){
             count ++ ;
             return artist     
         }
     })
-
-  console.log('filter Artists: ' , FilterArtists);
-
   const navigate = useNavigate();
   const handleClick = ()=>{
         navigate(`/famepeopletypes/${data?.type}`) ; 
+        window.scrollTo(0,0);
   }
 
   var settings = {
@@ -179,42 +176,19 @@ const ArtistSideBar = () => {
                         })
 
   return (
-    <div className="artistSideBar">
-
-        <div className='selectTypesINSideBarContainer px-2 w-full flex justify-center'>
-            {/* <SelectTypesInSideBar  /> */}
-            <DropDown onCompleteDropDown={(type)=>{
-              console.log('type: ',type) ;
-            }} widthProp='4/5' bgProp='black' justifyProp='center'/>
-        </div>    
-
-        {/* <div className="showTypes"> 
-
-            <div className="titleContainer mb-10 w-[100%] sm:w-[90%]">
-              <div className="titleWrapper py-2 w-[100%] text-6xl sm:w-2/3 lg:w-1/3"> <h2 className='title flex flex-wrap'>تایپ های شخصیتی</h2> </div>    
-            </div>
-            
-            <div className="typesWrapper">
-
-                <Slider {...settings}> {mbtiType} </Slider>
-
-            </div>
-        
-        </div> */}
-
-
+    <div className="artistSideBar rounded shadow-2xl">
         <div className="relativeProfilesWrapper">
 
-            <div className="relativeTitleWrapper flex justify-center">
+            <div className="relativeTitleWrapper flex justify-center mb-4 space-x-1 space-y-2">
                 <p className="relativeTitle">پروفایل های مرتبط</p>
             </div>
 
-            <ul className='relativeProfilesList'>
+            <ul className='relativeProfilesList w-full flex flex-wrap justify-center gap-4'>
                 {FilterArtists?.map((artist)=>{
                     return <li key={artist.id}> 
                     <RelativeProfileCard charName={artist.name} charType={artist.type}
                         career={artist.career} charProfileUrl={artist.photoUrl} 
-                        id={artist.id}/> </li>
+                        id={artist.id} scaleProp={cardScale}/> </li>
                 })}
             </ul>
 

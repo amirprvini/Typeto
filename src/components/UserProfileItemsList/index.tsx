@@ -1,20 +1,29 @@
-import React, { ChangeEvent, useContext, useState } from "react";
+import React, { ChangeEvent, useContext, useEffect, useState } from "react";
 import './index.css';
 import { AppContext } from "../context/store";
 import UserItemsButton from "../Buttons/UserItemsButton";
 import { FaUserEdit } from "react-icons/fa";
 import { RxExit } from "react-icons/rx";
-import { useNavigate } from "react-router-dom";
 import UserAvatar from "../UserAvatar";
+import { useNavigate } from "react-router-dom";
+import { UseGetUserQuery } from "../services/queries/useGetUserQuery";
 
 
-interface UserProfileItemsList{
-    setVal:(num:number)=>void ; 
+interface UserProfileItemsListProps{
+    setVal ?:(num:number)=>void ; 
 }
-export const UserProfileItemsList : React.FC<UserProfileItemsList> = ({setVal}) : JSX.Element =>{
+export const UserProfileItemsList : React.FC<UserProfileItemsListProps> = ({setVal}) : JSX.Element =>{
 
+    const {user,setUser} = useContext(AppContext) ;
+    const {data} = UseGetUserQuery(user?.id || "") ;
 
-    const [image,setImage] = useState<any>(null) ; 
+    const [loading,setLoading] = useState<boolean>(false); 
+    useEffect(()=>{
+        console.log('get user from query: ' , data);
+    },[loading])
+    
+
+    const [image,setImage] = useState<string>("./images/icons8-customer-90.png") ; 
      
 
     const itemsBtnData = [
@@ -31,22 +40,17 @@ export const UserProfileItemsList : React.FC<UserProfileItemsList> = ({setVal}) 
         },
     ]
 
-    const {user} = useContext(AppContext) ;
-    const navigate = useNavigate() ;  
-
-
-
+   const navigate = useNavigate() ;  
 
     const handleClick = (slugButton:string) => {
+        
         switch (slugButton) {
             case 'editProfile': 
-                navigate('/userProfile')                
-                setVal(1) ; 
+                navigate('/userProfile/editProfile')               
                 break;
         
             case 'exit': 
-                navigate('/userProfile')
-                setVal(2) ;          
+                navigate('/userProfile/signOut')         
                 break;
         
             default:
@@ -55,43 +59,28 @@ export const UserProfileItemsList : React.FC<UserProfileItemsList> = ({setVal}) 
     }
 
 
-  const fileChangedHandler = (e:any) => {
-  const selectFile = e.target.file ? e.target.files[0] : null;
-
-  if (selectFile) {
-    setImage(URL.createObjectURL(selectFile));
-  }
-};
-
-    return <div className="userProfileItemsListWrapper my-4" >
+    return <div className="userProfileItemsListWrapper my-4 rounded-lg shadow-2xl" onLoad={()=>{setLoading(!loading)}}>
         
         <div className="avatarWrapper">
-        <UserAvatar avatarUrl={image} />
-        </div>
-
-        {
-            image == null && <div className="chooseFileWrapper w-full text-[.8rem] flex justify-center">
-
-        <input type="file" name="myImage" onChange={fileChangedHandler}/>
+            <UserAvatar avatarUrl={image} />
+        </div> 
         
-        </div>
-        }
 
         <div className="userPhoneNumberWrapper">
         
         <div className="userInfoContainer">
-        {user?.username ? <p className="userInfo">{user?.username}</p> : <p className="userInfo">{user?.phoneNumber || ''}</p> }
+            {data?.username ? <p className="userInfo">{data?.username}</p>:<p className="userInfo">{data?.phoneNumber || ''}</p> }
         </div>
 
         </div>
 
         <div className="itemsListWrapper">
 
-            <ul className="userItemsList">
+            <ul className="userItemsList w-full flex flex-col justify-center items-center">
 
                 {
                     itemsBtnData.map((item)=>{
-                        return <li key={item.slug}> <UserItemsButton icon={item.icon} title={item.title} onclick={()=>handleClick(item.slug)} />  </li>
+                        return <li className="w-full" key={item.slug}> <UserItemsButton icon={item.icon} title={item.title} onclick={()=>handleClick(item.slug)}/> </li>
                     })
                 }
                 

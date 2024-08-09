@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './index.css'
-import PersonalityTypesCard from '../PersonalityTypesCard';
 import MBTIButton from '../Buttons/MBTIButton';
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -11,7 +10,7 @@ interface DropDownPros {
     bgProp ?: string ; 
     justifyProp ?: string ; 
 }
-const DropDown : React.FC<DropDownPros> = ({onCompleteDropDown,widthProp,bgProp,justifyProp}) :JSX.Element => {
+const DropDown : React.FC<DropDownPros> = ({onCompleteDropDown,widthProp='4/5',bgProp,justifyProp}) :JSX.Element => {
 
 
   const [state,setState] = useState<string>('INFP');
@@ -96,8 +95,8 @@ const DropDown : React.FC<DropDownPros> = ({onCompleteDropDown,widthProp,bgProp,
     const arrowWrapper = document.querySelector('.arrowWrapper') ;
     dropDown?.classList.toggle('hidden') ;  
     arrowWrapper?.classList.toggle("active") ;  
-
     setState(type) ; 
+    window.scrollTo(0,0);
   }
 
   return (
@@ -109,9 +108,9 @@ const DropDown : React.FC<DropDownPros> = ({onCompleteDropDown,widthProp,bgProp,
 
         <div className="dropDownContainer w-full items-center justify-start">
 
-            <div className={`dropDownTitleWrapper bg-${bgProp} flex space-x-2 w-full px-4 py-2 border-gray border-solid border-[1px] rounded-xl cursor-pointer`} onClick={handleClick} >
-                <div className="arrowWrapper transition duration-500 flex justify-center items-center ml-1"><IoIosArrowDown /></div>
-                <p className="dropDownTitle">{state}</p>
+            <div className={`dropDownTitleWrapper bg-${bgProp} flex space-x-2 w-full px-4 py-2 border-gray-400 border-solid border-[1px] rounded-xl cursor-pointer`} onClick={handleClick} >
+                <div className="arrowWrapper text-black transition duration-500 flex justify-center items-center ml-1"><IoIosArrowDown /></div>
+                <p className="dropDownTitle text-black">{state}</p>
             </div>
       
             <div className="dropDowm  mb-4 w-full border-gray border-solid border-[1px] rounded-xl px-4 py-2 max-h-44 overflow-y-scroll hidden">
@@ -121,7 +120,6 @@ const DropDown : React.FC<DropDownPros> = ({onCompleteDropDown,widthProp,bgProp,
                     { personalityTypes.map((type)=>{
                         return <li className='w-full' key={type.id}> <MBTIButton typeTitle={type.title} onCompleteButton={(type)=>{
                           onCompleteDropDown(type)
-                          console.log('clicked !!!',type) ;
                           handleSelect(type) ; 
                         }}/> </li>
                 })}

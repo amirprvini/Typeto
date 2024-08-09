@@ -15,10 +15,6 @@ const SearchResults : React.FC<SearchResultsProps> = ({artistsList,setInpState,d
     const navigate = useNavigate();
      
     const handleMouseDown = ()=>{
-        console.log('mouse down Event !!!') ; 
-        // console.log('input State before: ' , inpState)
-        // setInpState('amir') ; 
-        // console.log('input State after: ' , inpState)
         
     }
 
@@ -33,7 +29,7 @@ const SearchResults : React.FC<SearchResultsProps> = ({artistsList,setInpState,d
 
      if(artistsList.length >=1){
         return <div className={`searchResultsWrapper w-[85%] bg-black max-h-60 
-        overflow-y-scroll absolute flex justify-center rounded-sm z-10 ${displayProp}`} onMouseDown={handleMouseDown}>
+        overflow-y-scroll absolute top-0 flex justify-center rounded-sm z-10 ${displayProp}`} onMouseDown={handleMouseDown}>
         
         <ul className='resultsList'>
             {artistsList.map((artist:artistType)=>{
@@ -46,7 +42,7 @@ const SearchResults : React.FC<SearchResultsProps> = ({artistsList,setInpState,d
 
     </div>
      }else{
-        return <div></div>
+        return <div></div> 
      }
 }
 

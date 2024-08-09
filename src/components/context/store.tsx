@@ -47,13 +47,6 @@ export const ContextProvider :React.FC<ContextProviderProps>  = ({children}): JS
         
         if(access && refresh && userToken){
 
-
-            console.log('access token in useEffect: ',access);
-            console.log('refresh token in useEffect: ',refresh);
-            console.log('user Token in useEffect: ',userToken)
-
-            console.log('user before setting :', user);
-
             const userAsObj = JSON.parse(userToken) ; 
             
             setUser({
@@ -70,8 +63,6 @@ export const ContextProvider :React.FC<ContextProviderProps>  = ({children}): JS
 
             // AXIOS.defaults.headers.common.Authorization = `Bearer ${access}`
 
-            console.log('user after setting :', user);
-        
         }else{
 
             localStorage.removeItem('access');

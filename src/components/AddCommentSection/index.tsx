@@ -1,24 +1,16 @@
 import './index.css'
 import { useFormik } from "formik";
 import { AXIOS } from '../../config/axios.config';
-import { API_URLS } from '../../constants/api.urls';
-import { useEffect, useRef, useState } from 'react';
-import * as yup from 'yup' ;
-import axios, { Axios } from 'axios';
-import { commentType } from '../CommentSection';
-import { UseNewCommentMutation } from '../services/mutaions/useNewCommentMutation';
-import { QueryClient } from 'react-query';
-import { QueryClientStore } from '../services/queryClientStore';
-import { ReactQueryKeys } from '../services/keys';
+import {useRef} from 'react';
 import { useParams } from 'react-router-dom';
 import { IUserState } from '../context/types/context.types';
 import { commentProps } from '../context/types/comment.type';
-import CommentSectionModal from '../Modals/CommentModal';
 
 interface AddCommentSectionProps {
     artist ?: artistType ; 
     user ?: IUserState;
     onclick : ()=> void;
+    onComplete : (comment:commentProps,artistID:string) => void 
 }
 
 export type artistType = {
@@ -32,21 +24,16 @@ export type artistType = {
     comments : commentProps[]
 }
 
-export const AddCommentSection : React.FC<AddCommentSectionProps> = ({artist,user,onclick}) : JSX.Element =>{
+export const AddCommentSection : React.FC<AddCommentSectionProps> = ({artist,user,onclick,onComplete}) : JSX.Element =>{
 
-
-    const ref = useRef<any>(null);
-    const [state,setState] = useState<any>("");
-
+    const ref = useRef<any>(null);   
     const param = useParams();
-    const newCommnetMutation = UseNewCommentMutation(param.id || '');
-
-   
     const formik = useFormik<commentProps>({
         
         initialValues:{
         
         id : 0,
+        date : "" ,
         commentText : "",
         artistId : "",
         
@@ -61,19 +48,13 @@ export const AddCommentSection : React.FC<AddCommentSectionProps> = ({artist,use
             isAuthenticated : false , 
             mbtiType : ''
         },
-
-        likeCounter : 0,
-        disLikeCounter: 0
+        likedBy : [],
+        disLikedBy: []
         
         },
 
         onSubmit:(data:any,{resetForm})=>{
-
-            console.log("Data: " , data)
-            console.log("Comment Text: " , data.commentText)
-            // console.log("username ro pas dadammm: ", props.username)
             handleClick(data) ;  
-
             setTimeout(()=>{
                 resetForm();
             },500)
@@ -85,18 +66,12 @@ export const AddCommentSection : React.FC<AddCommentSectionProps> = ({artist,use
 
     const handleClick = async (data:commentProps) =>{
         
-        console.log("username ro pas dadammm: ", user?.username)
-        console.log("handle click hastammm[Bala]")
-        
-        // const fetchArtists = await AXIOS.get(API_URLS.GetArtists)
-
-        // const findArtist : artistType =  if(artist.name.split(" ").join("").toLowerCase() === artist.name.split(" ").join("").toLowerCase()){
-        //         return artist ; 
-        //    }
-
         const findArtist : artistType = artist! ; 
 
+                const date = new Date() ; 
+
                 data.id = Date.now();
+                data.date = date.toLocaleDateString("fa-IR")
                 data.artistId = artist?.id || '' ;
                 data.user = {
                     id : user?.id || '' , 
@@ -112,29 +87,11 @@ export const AddCommentSection : React.FC<AddCommentSectionProps> = ({artist,use
                 };
 
                 findArtist.comments.push(data)
-               // await AXIOS.put(`/artists/${props.artistID}`,findArtist);
-                console.log("handle click hastammm[Paeeeen]");
-
-                newCommnetMutation.mutate(findArtist) ;
-
-                // update comments list of artist in query !!!
-                QueryClientStore.refetchQueries(ReactQueryKeys.GetArtists)
-
-                console.log("invalidate kardam !!!");
+                onComplete(data,param.id || '')
                 
+                await AXIOS.put(`/artists/${param.id}`,findArtist);
+
     }
-
-
-    // const handleQuery = (findArtist:artistType)=>{
-
-    //     newCommnetMutation.mutate(findArtist) ;
-        
-    //     QueryClientStore.refetchQueries(ReactQueryKeys.GetArtists)
-    
-    //     console.log('find arist in handle query: ' , findArtist)
-    
-    // }
-
 
     return <div className="addCommentWrapper">
             

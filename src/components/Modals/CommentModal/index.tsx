@@ -17,9 +17,7 @@ const CommentSectionModal : React.FC<CommentSectionModalProps> = forwardRef((pro
     navigate('/home')
   }
 
-  return (
-  <>
-<dialog ref={ref} className="modal">
+  return <dialog ref={ref} className="modal">
   <div className="modal-box">
     {/* <h3 className="font-bold text-lg">Hello!</h3> */}
     <p className="py-4">برای افزودن دیدگاه ابتدا باید پروفایل کاربری خود را تکمیل کنید.</p>
@@ -32,8 +30,6 @@ const CommentSectionModal : React.FC<CommentSectionModalProps> = forwardRef((pro
   </div>
 </dialog>
 
-    </>
-  )
 })
 
 export default CommentSectionModal
