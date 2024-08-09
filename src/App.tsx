@@ -13,7 +13,9 @@ function App() {
   return (
     <QueryClientProvider client={QueryClientStore}>
       <ContextProvider>
-        <RouteProvider />
+        {/* <ProviderOfContext> */}
+          <RouteProvider />
+        {/* </ProviderOfContext> */}
       </ContextProvider>
       <ReactQueryDevtools initialIsOpen={false} /> 
     </QueryClientProvider>
