@@ -11,11 +11,13 @@ const UserItemsButton : React.FC<UserItemsButtonProps> = ({icon,title,onclick}) 
   return (
     <div className='userItemsButtonWrapper cursor-pointer' onClick={onclick}>
         
-            <div className='userItemsButton'>
+            <div className='userItemsButton flex flex-col items-center justify-center group'>
 
                 <div className='userItemsButtonIcon'>{icon}</div>
 
-                <div className='userItemsButtonTitle'>{title}</div>
+                <div className='userItemsButtonTitleWrapeer w-full flex justify-center rounded-lg py-2 px-4 group-hover:bg-black group-hover:text-white'>
+                      <p className="userItemsButtonTitle w-4/5 flex flex-wrap justify-center leading-6"> {title} </p>
+                </div>
 
             </div>
     </div>

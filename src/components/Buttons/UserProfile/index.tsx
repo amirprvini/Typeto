@@ -18,9 +18,7 @@ export const UserProfile : React.FC <IUserProfileProps> = () : JSX.Element =>{
     const handleClick = ()=>{
         setIsClicked(!isCliked)
         navigate('/userProfile') ;
-        
-        console.log("isClicked: " , isCliked);
-
+        window.scrollTo(0,0);
     }
     return <div className="userProfileButtonWrapper text-white" onClick={handleClick}>
       

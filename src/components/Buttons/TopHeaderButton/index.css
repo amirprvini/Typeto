@@ -2,7 +2,6 @@
     
     width: 150px;
     background-color: rgba(99, 110, 114,.3);    
-    color: white;
     border-radius: .5rem;
     padding: .3rem .6rem;
     /* font-weight: bold; */
@@ -15,8 +14,8 @@
 }
 
 .topHeaderBtn:hover{
-    background-color: rgba(0, 206, 203, 0.2);
-    border: 1px solid rgba(0, 206, 203, 0.627);
+    background-color: black;
+    color: white;
 }
 
 .buttonIcon{

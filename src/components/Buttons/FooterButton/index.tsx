@@ -7,7 +7,7 @@ interface FooterButtonProps {
 }
 
 
-const FooterButton : React.FC<FooterButtonProps> = ({faTitle,enTitle,onClickFunction}) : JSX.Element =>{
+const FooterButton : React.FC<FooterButtonProps> = ({faTitle,onClickFunction}) : JSX.Element =>{
     return (
     <button className="footerBtn" onClick={onClickFunction}> {faTitle} </button> 
 )

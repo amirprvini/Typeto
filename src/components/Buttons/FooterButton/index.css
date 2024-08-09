@@ -1,6 +1,6 @@
 .footerBtn{
     width: max-content;
-    font-size: 1rem;
+    font-size: clamp(.5rem,3vw,1.8rem);
     color: rgb(128, 128, 128);
     display: flex;
     justify-content: center;

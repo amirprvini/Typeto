@@ -10,12 +10,9 @@ interface IMBTIButton {
 
 const MBTIButton : React.FC<IMBTIButton> = ({typeTitle,onCompleteButton}) : JSX.Element =>{
    
-   const navigate = useNavigate() ; 
-   
     const handleClick = ()=> {
      
        // navigate("/personalitytypes/" + typeTitle)
-       console.log(typeTitle)
        onCompleteButton(typeTitle)
 
     } 
