@@ -1,12 +1,13 @@
 .personalityTypesPage{
    width: 75%;
    display: flex; 
+   justify-content: center;
 }
 
 .personalityTypesPage .content {
 
     width: 80%;
-    background-color: rgba(0, 206, 203, 0.04);
+    /* background-color: rgba(0, 206, 203, 0.04); */
 
 }
 

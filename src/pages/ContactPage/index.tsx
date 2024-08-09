@@ -4,40 +4,31 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import { Link, useNavigate } from 'react-router-dom';
 import TopHeaderButton from '../../components/Buttons/TopHeaderButton'; 
 
- const ContactInputsData = [
-        {
-            Title : "username" ,
-            PlaceHolder : "عنوان" ,
-            Type : "text"
+const ContactInputsData = [
+    {
+        Title : "username" ,
+        PlaceHolder : "عنوان" ,
+        Type : "text"
         },
         {
             Title : "email" ,
             PlaceHolder : "ایمیل خود را وارد کنید." ,
             Type : "email"
-        },
-        // {
-        //     Title : "phoneNumber" ,
-        //     PlaceHolder : "شماره موبایل خود را وارد کنید." ,
-        //     Type : "textArea"
-        // },
-        // {
-        //     Title : "password" ,
-        //     PlaceHolder : "رمز عبور خود را وارد کنید." ,
-        //     Type : "password"
-        // },
-        // {
-        //     Title : "confirmPassword" ,
-        //     PlaceHolder : "تکرار رمز عبور را وارد کنید." ,
-        //     Type : "password"
-        // }
+        }]
+        
     
-    ]
-
-const ContactPage :React.FC = () : JSX.Element =>{
+    const ContactPage :React.FC = () : JSX.Element =>{
+            
+        const navigate = useNavigate();
+    
+        const handleClick = ()=>{
+            navigate('/home')
+        }
+        
 
     return (<div className="contactPage"> 
         
-        <div className="formContainer">
+        <div className="formContainer w-[95%] sm:w-4/5 lg:w-3/4 shadow-2xl">
 
             <div className="contactPageTitleWrapper">
                 <h2 className='title text-gray-300'>تماس با ما</h2>
@@ -57,7 +48,7 @@ const ContactPage :React.FC = () : JSX.Element =>{
 
                 <div className="formButtons">
 
-                    <TopHeaderButton title="ارسال پیام" icon={<RiSendPlaneFill />}/>
+                    <TopHeaderButton title="ارسال پیام" icon={<RiSendPlaneFill />} onclick={handleClick}/>
 
                 </div>
 

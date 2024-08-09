@@ -1,58 +1,34 @@
 import { useContext, useEffect, useRef, useState } from 'react';
-import { SideBar } from '../../components/Layout/SideBar';
-import { AXIOS } from '../../config/axios.config';
-import { API_URLS } from '../../constants/api.urls';
-import { object } from 'yup';
 import { Profile } from '../../components/Profile';
-import { CommentSection } from '../../components/CommentSection';
-import { AddCommentSection } from '../../components/AddCommentSection';
+import { AddCommentSection, artistType } from '../../components/AddCommentSection';
 import { CommentList } from '../../components/CommentList';
-import { commentType } from '../../components/CommentSection';
 import { AppContext } from '../../components/context/store';
-import { FormProps, useLocation, useParams } from 'react-router-dom';
+import {useParams } from 'react-router-dom';
 import { UseArtistQuery } from '../../components/services/queries/useArtistQuery';
 import CommentSectionModal from '../../components/Modals/CommentModal';
 import { createPortal } from 'react-dom';
-import FilterComments from '../../components/FilterComments';
 import ArtistSideBar from '../../components/Layout/ArtistSideBar';
+import { commentProps } from '../../components/context/types/comment.type';
+import axios, { Axios } from 'axios';
 
-interface ProfilePageProps {
-    
-}
+interface ProfilePageProps {}
 
 
 export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
 
+    const [update , setUpdate] = useState<boolean>(false) ; 
+    
     const params = useParams() ; 
     const {user} = useContext(AppContext) ; 
-    
-    const { isLoading, isSuccess, isError, data, error, refetch } = UseArtistQuery(params.id || ''); 
+    const {data} = UseArtistQuery(params.id || ''); 
 
-    type profileType = {
-        name : string ,
-        id : number , 
-        career : string ,
-        type : string ,
-        photoUrl : string ,
-        bioGraphy : string,
-        comments : commentType[]
-    }
-
-    type FormProps = {
-        username : string ; 
-        email : string ;
-        phoneNumber : string ;
-        password : string ;
-        confirmPassword : string ;
-        token : string ;
-        isAuthenticated : boolean
-    }
-
-    const [state,setState] = useState<profileType>() ; 
-    const [info,setInfo] = useState<FormProps>();
-    const [update , setUpdate] = useState<boolean>(false) ; 
     const ref = useRef<any>();
     const modalRef = useRef<any>();
+
+
+    const handleScrolToTop = ()=>{
+        window.scrollTo(0,0);
+    }
 
     const handleClick = ()=>{
         setUpdate(!update)
@@ -60,52 +36,40 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
         if((user === undefined) || (user.username === '' && user.mbtiType ==='')){
 
             modalRef.current.showModal();
-            console.log('amirrrrrrrrrrrrrrrrrrrr')
         }
     }
 
 
-    const handleUpdateInList = ():boolean =>{
-        return update ; 
+
+    const fetchArtists = async (artistId:string)=>{
+
+        const AllArtists = await axios.get("http://localhost:3000/artists") 
+        const findArtist = AllArtists.data.find((artist:artistType)=>{
+            return artistId === artist.id
+        })
     }
 
+
     useEffect(()=>{
-        setInfo({...user});
-        console.log('get artist from query: ', data);
-        console.log('get user from context: ', user);
+        fetchArtists(params.id || '');
     },[])
 
 
-
-    useEffect(()=>{
-
-        // fetchArtists("mehradhidden").then(()=>{
-        //     // setUpdate(!update);
-        //     console.log("update: " , update);
-        //     // console.log("global user in profile page: ",data!.username)
-        //     // console.log("list state: " , ref.current.state)
-        // })
-        
-
-    },[update])
-
-
-    console.log('data: ' , data)
-    console.log("state: " , state);
-    console.log("Comments: " , data?.comments);
-    
-
     return (
-        <div className="profilePage w-3/4 flex gap-4"> 
+        <div className="profilePage w-full flex justify-around space-x-2 px-2 lg:px-6" onLoad={handleScrolToTop}> 
 
         {createPortal(
         <CommentSectionModal ref={modalRef} />,
         document.body
       )}
 
-            <div className="profileContent w-3/4 flex flex-col">
+            <div className="hidden lg:block artistSideBarWrapper w-1/3 bg-black text-white">
+                <ArtistSideBar />
+            </div>
 
-                <div className="profileContainer">
+            <div className="profileContent w-4/5 lg:w-2/3  flex flex-col items-center">
+
+                <div className="profileContainer w-full lg:w-3/4">
 
                     <Profile profileName={data?.name} profileCareer={data?.career} profilePhoto={data?.photoUrl}
                     profileType={data?.type}  profileBioGraphy={data?.bioGraphy} />
@@ -113,7 +77,11 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
                 </div>
 
 
-                <div className="commentsWrapper mt-20">
+                <div className="relativeprofilesWrapper lg:hidden w-full text-white my-8">
+                    <ArtistSideBar />
+                </div>
+
+                <div className="commentsWrapper mt-20 w-3/4 sm:w-3/5">
 
 
                     <div className="titleContainer mb-5">
@@ -122,22 +90,21 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
                     </div>
 
                     <div className="addCommentSection mb-20">
-                        <AddCommentSection artist={data!} user={user} onclick={handleClick} />    
+                        <AddCommentSection artist={data!} user={user} onclick={handleClick} onComplete={(comment:commentProps,id:string)=>{
+                           fetchArtists(params.id || "");
+                        }}/>    
                     </div>
-
-                    {/* <div className="filterCommentsWrapper mb-5">
-                        <FilterComments />
-                    </div> */}
 
                     <div className="commentListWrapper">
-                        <CommentList artistName={data?.name} comments={data?.comments} ref={ref} updateProp={update}/>
+                        <CommentList artistId={data?.id || ''} 
+                        comments={data?.comments.reverse()} 
+                        ref={ref} updateProp={update} onComplete={(cmID)=>{
+                            fetchArtists(params.id || "") 
+                            }}/>
                     </div>
+
                 </div>
 
-            </div>
-
-            <div className="artistSideBarWrapper w-1/4 bg-black text-white">
-                <ArtistSideBar  />
             </div>
 
          </div>

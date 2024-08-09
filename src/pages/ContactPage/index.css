@@ -13,11 +13,10 @@
 
 
 .contactPage .formContainer {
-    width: 70%;
-    height: 500px;
+    height: max-content;
     padding: .8rem .1rem ;
     background-color: black;
-    border: 1px solid rgba(0, 206, 203, 0.3);
+    border: 2px solid rgba(0, 206, 203, 0.3);
     color: white;
     border-radius: 2rem;
     display: flex;
@@ -68,7 +67,6 @@
 }
 
 .contactPage .form li {
-
     width: 90%;
     list-style: none;
 }
@@ -99,48 +97,9 @@
 }
 
 
-
-
-
-
 /* -------------------------------------Media Query-------------------------------------- */
 
-@media screen and (max-width : 855px) {
- 
-    .formContainer{
-        width: 50%;
-    }
-    
-}
-
-
-@media screen and (max-width : 680px) {
- 
-     .formContainer{
-        width: 60%;
-    }
-}
-
-@media screen and (max-width : 570px) {
- 
-     .formContainer{
-        width: 70%;
-    }
-}
-
-
-@media screen and (max-width : 480px) {
- 
-     .formContainer{
-        width: 80%;
-    }
-}
-
 @media screen and (max-width : 425px) {
- 
-     .formContainer{
-        width: 80%;
-    }
 
     .formButtons{
         scale: .8;

@@ -31,9 +31,6 @@ export const FamousPeoplePage : React.FC = () : JSX.Element =>{
         fetchArtists() ; 
     },[])
 
-
-    console.log("state: ",state)
-    
     return (
         <div className="famousPeoplePage">
         
@@ -53,7 +50,7 @@ export const FamousPeoplePage : React.FC = () : JSX.Element =>{
             
          </div>
 
-        <div className="SideBar"> <ArtistCard/> </div>
+        {/* <div className="SideBar"> <ArtistCard/> </div> */}
         
         
          </div>

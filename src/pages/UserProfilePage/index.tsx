@@ -1,49 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react' ; 
-import './index.css'
+import {useContext, useEffect, useState } from 'react';
 import { UserProfileItemsList } from '../../components/UserProfileItemsList';
-import EditUserInfo from '../../components/EditUserInfo';
-import SignOut from '../../components/SignOut';
+import { AppContext } from '../../components/context/store';
+import axios from 'axios';
+import { UseGetUserQuery } from '../../components/services/queries/useGetUserQuery';
 
+interface UserProfilePageProps {}
+const UserProfilePage : React.FC<UserProfilePageProps> = () : JSX.Element => {
 
-const UserProfilePage = () => {
+    return <div className="userProfilePage w-[90%] sm:w-3/4 lg:w-1/2 bg-black text-white text-7xl flex justify-center gap-12"> 
 
-  const [value,setValue] = useState<number>(-1) ;
+      <div className="userSideBarContainer w-3/4 "> <UserProfileItemsList/> </div>    
 
-  console.log('value in userProfile Page: ' , value) ; 
-
-  if (value==2) {
-
-    return (
-    <div className="userProfilePage"> 
-
-    <div className="userSideBarContainer "> <UserProfileItemsList setVal={(number)=>setValue(number)} /> </div>    
-
-    <div className="userContentContainer"> <SignOut /> 
-      
-     </div>
-    
     </div>
 
-  )}else{
-    
-    return(
-      <div className="userProfilePage"> 
-
-    <div className="userSideBarContainer"> <UserProfileItemsList setVal={(number)=>setValue(number)} /> </div>    
-
-    <div className="userContentContainer"> <EditUserInfo /> 
-
-      
-     </div>
-    
-    </div>
-    
-    )
-  }
-    
-
-
-  
 }
-
+   
 export default UserProfilePage

@@ -5,7 +5,7 @@ import TypesTags from "../../components/TypesTags";
 import { famePeopleData } from "../FamousPeoplePage/famePeopleData";
 import FamePeopleCard from "../../components/FamePeopleCard";
 import MoreButton from "../../components/Buttons/MoreButton";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import FameMoreButton from "../../components/FameMoreButton";
 let counter = 1 ;
 
@@ -17,10 +17,12 @@ interface ITypesInfoPage {
 
 const TypesInfoPage : React.FC <ITypesInfoPage> = ({title}) :JSX.Element =>{
 
-    const navigate = useNavigate();
-    const handleClick = ()=> {
-        navigate("/famepeopletypes");
-    } 
+    // const navigate = useNavigate();
+    // const handleClick = ()=> {
+    //     navigate("/famepeopletypes");
+    // } 
+
+    const {type} = useParams();
 
     return (
         <div className="typesInfoPage">
@@ -28,7 +30,7 @@ const TypesInfoPage : React.FC <ITypesInfoPage> = ({title}) :JSX.Element =>{
         <div className="content">
 
         {TypesData.map((data)=>{
-            if(data.title === title) {
+            if(data.title === type) {
                 return (
                    <>
                     <div className="titleWrapper"> <h1 className='title'>تایپ شخصیتی {data.title} </h1>
@@ -172,7 +174,7 @@ const TypesInfoPage : React.FC <ITypesInfoPage> = ({title}) :JSX.Element =>{
                             </ul>
 
                             <div className="moreButtonWrapper flex justify-end mt-5 ">
-                                <FameMoreButton title={title} />
+                                <FameMoreButton title={type} />
                             </div>
 
                         </div>
@@ -197,3 +199,7 @@ const TypesInfoPage : React.FC <ITypesInfoPage> = ({title}) :JSX.Element =>{
 }
 
 export default TypesInfoPage ; 
+
+function useParam() {
+    throw new Error("Function not implemented.");
+}

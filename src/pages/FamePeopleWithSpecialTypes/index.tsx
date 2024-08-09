@@ -26,9 +26,6 @@ export const FamePeopleWithSpecialTypes : React.FC<IFamePeopleWithSpecialTypes> 
             
          </div>
 
-        <div className="SideBar"> <SideBar/> </div>
-        
-        
          </div>
     )
 }
