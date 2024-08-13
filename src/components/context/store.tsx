@@ -26,7 +26,9 @@ export interface ContextProviderProps extends React.PropsWithChildren {}
 
 export const ContextProvider :React.FC<ContextProviderProps>  = ({children}): JSX.Element =>{
     
-    const [user,setUser] = useState<any>();
+    const [user,setUser] = useState<IUserState>();
+    const [loading,setLoading] = useState<boolean>(false) ;
+    const [updateComments , setUpdateComments] = useState<boolean>(false) ; 
 
     // const [updateApp,setUpdateApp] = useState<boolean>(false);
 
@@ -77,8 +79,10 @@ export const ContextProvider :React.FC<ContextProviderProps>  = ({children}): JS
     return <AppContext.Provider value = {{
         user,
         setUser,
-        // updateApp,
-        // setUpdateApp
+        loading,
+        setLoading,
+        updateComments,
+        setUpdateComments
     }}>
         {children}
     </AppContext.Provider>
