@@ -8,58 +8,179 @@
       "photoUrl": "https://static1.personality-database.com/profile_images/21ca6867612a47749b23dc1e1038a906.png",
       "bioGraphy": "مهراد مستوفی راد ملقب به مهراد هیددن یکی از برترین آرتیست های رپ فارسی به شمار می رود که کار خود را در لندن به همراه سهراب و سامان آغاز کرد.",
       "id": "1",
-      "comments": []
+      "comments": [
+        {
+          "id": 1723808997399,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "555555555555",
+          "artistId": "1",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723804211868,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "5555555555",
+          "artistId": "1",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723804192966,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "333333333333333",
+          "artistId": "1",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723803855660,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "22222222222222",
+          "artistId": "1",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723803826563,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "1111111111",
+          "artistId": "1",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723809065264,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "66666666666",
+          "artistId": "1",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [],
+          "disLikedBy": []
+        }
+      ]
     },
     {
       "name": "Mia Plays",
       "faName": "میا پلیز || کیمیا روانگر",
       "career": "Musician",
       "type": "INTJ",
+      "bioGraphy": "کیمیا روانگر با نام مستعار میا پلیز متولد ۶ نوامبر سال ۱۹۹۲ و معادل ۱۵ ابان ۱۳۷۱ است . او در کنکور سال ۱۳۹۰ رتبه ی دو آورد و در سال ۱۳۹۵ لیسانس طراحی صنعتی گرفت و این رشته را دوست نداشت تا وقتی که به کمک این رشته توانست محصولات خود را با نام کوکورو در سال ۱۳۹۷ درست کند .",
       "photoUrl": "https://static1.personality-database.com/profile_images/c157110dea804f1baac0da4497ef2982.png",
-      "comments": [
-        {
-          "id": 1722701492403,
-          "date": "۱۴۰۳/۵/۱۳",
-          "commentText": "hhhhhhhhhhh",
-          "artistId": "3",
-          "user": {
-            "id": "1722672515502",
-            "phoneNumber": "09391451813",
-            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
-            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-            "avatar": "",
-            "username": "hooman",
-            "email": "amirparvini2000@gmail.com",
-            "isAuthenticated": true,
-            "mbtiType": "INTP"
-          },
-          "likedBy": [
-            {
-              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
-              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-              "phoneNumber": "09391451813",
-              "avatar": "",
-              "username": "hooman",
-              "email": "amirparvini2000@gmail.com",
-              "mbtiType": "INTP",
-              "isAuthenticated": true,
-              "id": "1722672515502"
-            },
-            {
-              "avatar": "",
-              "username": "",
-              "email": "",
-              "mbtiType": "",
-              "isAuthenticated": true,
-              "phoneNumber": "09374898048",
-              "id": "1722847410435",
-              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
-              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw"
-            }
-          ],
-          "disLikedBy": []
-        }
-      ],
+      "comments": [],
       "id": "3"
     },
     {
@@ -67,6 +188,7 @@
       "faName": "امیر تتلو || امیر حسین مقصودلو",
       "career": "Musician",
       "type": "ISTP",
+      "bioGraphy": "امیرحسین مقصودلو در ۳۰ شهریور ۱۳۶۶ در محله مجیدیه تهران با اصالتی آذری و در یک خانوادهٔ ۵ نفره زاده شد. مدتی به خاطر کار پدرش در رشت زندگی کردند و امیر با توجه به وضع مالی خانواده‌اش، از نوجوانی کارگری کرده‌است. او دو خواهر بزرگ‌تر از خود دارد. امیر تتلو مدتی در کارگاه نجاری و گاهی نیز در یک سوپرمارکت شاگرد بود.",
       "photoUrl": "https://static1.personality-database.com/profile_images/adc42bddc37640fb9f3daab6dbf98a1d.png",
       "comments": [],
       "id": "5"
@@ -76,28 +198,9 @@
       "faName": "یاس",
       "career": "Musician",
       "type": "INFP",
+      "bioGraphy": "یاسر بختیاری در ۳۰ خرداد ۱۳۶۱ در تالش، گیلان به دنیا آمد. دوران کودکی وی در محله‌های ناصر خسرو، اکباتان و شمشیری در تهران سپری شد. در دوران نوجوانی در ورزش کشتی آزاد زیر نظر مربی خود هاشم کلاهی فعالیت می‌کرد و پس از مدتی فعالیتش در کشتی را کنار گذاشت.",
       "photoUrl": "https://static1.personality-database.com/profile_images/d6cb674429a8434d95bbc7b65f8eb72c.png",
-      "comments": [
-        {
-          "id": 1722616659752,
-          "date": "۱۴۰۳/۵/۱۲",
-          "commentText": "سلاممممممممم",
-          "artistId": "7",
-          "user": {
-            "id": "1722328713715",
-            "phoneNumber": "09927172301",
-            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
-            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-            "avatar": "",
-            "username": "",
-            "email": "",
-            "isAuthenticated": true,
-            "mbtiType": ""
-          },
-          "likedBy": [],
-          "disLikedBy": []
-        }
-      ],
+      "comments": [],
       "id": "7"
     },
     {
@@ -105,6 +208,7 @@
       "faName": "مدگل",
       "career": "Musician",
       "type": "INFP",
+      "bioGraphy": "بیوگرافی مدگل مدگل متولد 7 اردیبهشت سال 1374 است و در شهر تهران متولد شده‌است. مدگل از 17 سالگی کار موسیقی را شروع کرده و اکنون که 28 سال سن دارد بیش از 20 آهنگ دارد که با همکاری جیدال آنها را خوانده و منتشر کرده است. رابطه دوستی مدگل و جیدال باعث شد بسیاری از آهنگ‌های این خواننده به‌صورت مشترک ضبط و منتشر شود",
       "photoUrl": "https://static1.personality-database.com/profile_images/58d986f9adc946c6952804dc0ea01f21.png",
       "comments": [],
       "id": "8"
@@ -114,12 +218,65 @@
       "faName": "احسان علیخانی",
       "career": "Musician",
       "type": "INFP",
+      "bioGraphy": "احسان علیخانی متولد ۱۵ آبان ۱۳۶۱ در تهران ، مجری و برنامه ساز است او فارغ التحصیل لیسانس رشته مدیریت بازرگانی از دانشگاه تهران می باشد که از دستیاری شروع کرد و حالا تهیه کننده ، کارگردان و مجری تلویزیون می باشد",
       "photoUrl": "https://static1.personality-database.com/profile_images/04f827da7663484abc170c16ce19d0e2.png",
-      "comments": [],
+      "comments": [
+        {
+          "id": 1723962758995,
+          "date": "۱۴۰۳/۵/۲۸",
+          "commentText": "222222222222",
+          "artistId": "9",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723962664180,
+          "date": "۱۴۰۳/۵/۲۸",
+          "commentText": "111111111111",
+          "artistId": "9",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        }
+      ],
       "id": "9"
     },
     {
       "name": "Sogang",
+      "id": "10",
       "faName": "سوگنگ",
       "career": "Musician",
       "type": "INFP",
@@ -127,221 +284,442 @@
       "photoUrl": "https://static1.personality-database.com/profile_images/b24e33cb040d4c82a23711cee7af24a4.png",
       "comments": [
         {
-          "id": 1722700910942,
-          "date": "۱۴۰۳/۵/۱۳",
-          "commentText": "hiiiiiiiiiii",
+          "id": 1723803185503,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "9999999999",
           "artistId": "10",
           "user": {
-            "id": "1722672515502",
-            "phoneNumber": "09391451813",
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
             "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
             "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
             "avatar": "",
-            "username": "hooman",
-            "email": "amirparvini2000@gmail.com",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
             "isAuthenticated": true,
-            "mbtiType": ""
+            "mbtiType": "ENTP"
           },
           "likedBy": [],
           "disLikedBy": []
+        },
+        {
+          "id": 1723803179257,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "888888888888888",
+          "artistId": "10",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723803158828,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "7777777777777777",
+          "artistId": "10",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723803124856,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "6666666666666",
+          "artistId": "10",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723802942927,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "5555555555555",
+          "artistId": "10",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723802881164,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "444444444444444",
+          "artistId": "10",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723802855359,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "hiiiiiiiiiiiiiiii3",
+          "artistId": "10",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723802733508,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "hiiiiiiiiiiiiiiiiiiii2",
+          "artistId": "10",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723802722408,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "hiiiiiiiiiiiiii",
+          "artistId": "10",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723803198067,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "1111111111111",
+          "artistId": "10",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
         }
-      ],
-      "id": "10"
-    },
-    {
-      "name": "Nika Shakarami",
-      "faName": "نیکا شاکرمی",
-      "career": "Musician",
-      "type": "INFP",
-      "photoUrl": "https://static1.personality-database.com/profile_images/67901a7752d141e69882b23b0b827ab2.png",
-      "comments": [],
-      "id": "11"
+      ]
     },
     {
       "name": "Farshad Silent",
       "faName": "فرشاد سایلنت",
       "career": "Musician",
       "type": "INFP",
+      "bioGraphy": "فرشاد دهقان با نام مستعار فرشاد سایلنت که یکی از معروف‌ ترین یوتیوبر های ایرانی است و فرشاد سایلنت متولد آبان‌ ماه ۱۳۶۷ در بندرعباس است و در کودکی به همراه خانواده به اصفهان نقل‌مکان می‌ کند و در آنجا بزرگ می‌ شود و او از همان ابتدا به ورزش علاقه‌مند بود",
       "photoUrl": "https://static1.personality-database.com/profile_images/d2b70bf7b5e74e40a91b35f11c3b0035.png",
       "comments": [
         {
-          "id": 1722701388428,
-          "date": "۱۴۰۳/۵/۱۳",
-          "commentText": "salammmmmmmmmmmm",
+          "id": 1723803461923,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "555555555555",
           "artistId": "12",
           "user": {
-            "id": "1722672515502",
-            "phoneNumber": "09391451813",
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
             "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
             "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
             "avatar": "",
-            "username": "hooman",
-            "email": "amirparvini2000@gmail.com",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
             "isAuthenticated": true,
-            "mbtiType": ""
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723803398529,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "444444444444444444444",
+          "artistId": "12",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723803351550,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "333333333333333",
+          "artistId": "12",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723803335381,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "22222222222222",
+          "artistId": "12",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
+          },
+          "likedBy": [
+            {
+              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+              "phoneNumber": "08585858585",
+              "avatar": "",
+              "username": "Amir Parvini",
+              "email": "rdnhrhrhr@gmail.com",
+              "mbtiType": "ENTP",
+              "isAuthenticated": true,
+              "id": "1723497362820"
+            }
+          ],
+          "disLikedBy": []
+        },
+        {
+          "id": 1723803310654,
+          "date": "۱۴۰۳/۵/۲۶",
+          "commentText": "111111111",
+          "artistId": "12",
+          "user": {
+            "id": "1723497362820",
+            "phoneNumber": "08585858585",
+            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
+            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+            "avatar": "",
+            "username": "Amir Parvini",
+            "email": "rdnhrhrhr@gmail.com",
+            "isAuthenticated": true,
+            "mbtiType": "ENTP"
           },
           "likedBy": [],
           "disLikedBy": []
         }
       ],
       "id": "12"
-    },
-    {
-      "name": "Yas",
-      "faName": "یاس",
-      "career": "Musician",
-      "type": "infj",
-      "photoUrl": "https://static1.personality-database.com/profile_images/d6cb674429a8434d95bbc7b65f8eb72c.png",
-      "comments": [],
-      "id": "13"
-    },
-    {
-      "name": "MadGal",
-      "faName": "مدگل",
-      "career": "Musician",
-      "type": "ISTP",
-      "photoUrl": "https://static1.personality-database.com/profile_images/58d986f9adc946c6952804dc0ea01f21.png",
-      "comments": [
-        {
-          "id": 1722672889820,
-          "date": "۱۴۰۳/۵/۱۳",
-          "commentText": "salammmmm",
-          "artistId": "14",
-          "user": {
-            "id": "1722672515502",
-            "phoneNumber": "09391451813",
-            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
-            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-            "avatar": "",
-            "username": "hooman",
-            "email": "amirparvini2000@gmail.com",
-            "isAuthenticated": true,
-            "mbtiType": ""
-          },
-          "likedBy": [],
-          "disLikedBy": []
-        },
-        {
-          "id": 1722672438916,
-          "date": "۱۴۰۳/۵/۱۳",
-          "commentText": "heloooooo",
-          "artistId": "14",
-          "user": {
-            "id": "1722328713715",
-            "phoneNumber": "09927172301",
-            "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
-            "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-            "avatar": "",
-            "username": "amirprvini",
-            "email": "amirparvini2000@gmail.com",
-            "isAuthenticated": true,
-            "mbtiType": "INTP"
-          },
-          "likedBy": [
-            {
-              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
-              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-              "phoneNumber": "09927172301",
-              "avatar": "",
-              "username": "amirprvini",
-              "email": "amirparvini2000@gmail.com",
-              "mbtiType": "INTP",
-              "isAuthenticated": true,
-              "id": "1722328713715"
-            },
-            {
-              "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg",
-              "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-              "phoneNumber": "09391451813",
-              "avatar": "",
-              "username": "hooman",
-              "email": "amirparvini2000@gmail.com",
-              "mbtiType": "",
-              "isAuthenticated": true,
-              "id": "1722672515502"
-            }
-          ],
-          "disLikedBy": []
-        }
-      ],
-      "id": "14"
     }
   ],
   "users": [
     {
       "avatar": "",
-      "username": "",
-      "email": "",
-      "mbtiType": "",
+      "username": "amirprvini",
+      "email": "amirparvini2000@gmail.com",
+      "mbtiType": "ENFP",
       "isAuthenticated": false,
       "phoneNumber": "09374898048",
-      "id": "1723139965386",
+      "id": "1723495847315",
       "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
       "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
     },
     {
       "avatar": "",
-      "username": "",
-      "email": "",
-      "mbtiType": "",
-      "isAuthenticated": false,
-      "phoneNumber": "08585858585",
-      "id": "1723140027195",
-      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
-    },
-    {
-      "avatar": "",
-      "username": "mamad",
-      "email": "jhbjbjbvi@gmail.com",
-      "mbtiType": "INTJ",
-      "isAuthenticated": false,
-      "phoneNumber": "08585858585",
-      "id": "1723140132332",
-      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
-    },
-    {
-      "avatar": "",
-      "username": "amir",
+      "username": "hooman",
       "email": "amirparvini2000@gmail.com",
-      "mbtiType": "INFJ",
+      "mbtiType": "ENFP",
       "isAuthenticated": false,
-      "phoneNumber": "09374898048",
-      "id": "1723140502746",
-      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
-    },
-    {
-      "avatar": "",
-      "username": "",
-      "email": "",
-      "mbtiType": "",
-      "isAuthenticated": false,
-      "phoneNumber": "09922222222",
-      "id": "1723140782918",
-      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
-    },
-    {
-      "avatar": "",
-      "username": "taghiiiii",
-      "email": "amirparvini2000@gmail.com",
-      "mbtiType": "ENFJ",
-      "isAuthenticated": false,
-      "phoneNumber": "09922222222",
-      "id": "1723140902611",
-      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
-      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
-    },
-    {
-      "avatar": "",
-      "username": "mamad",
-      "email": "rdnhrhrhr@gmail.com",
-      "mbtiType": "ISTP",
-      "isAuthenticated": true,
       "phoneNumber": "09927172301",
-      "id": "1723141450498",
+      "id": "1723496855501",
+      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
+    },
+    {
+      "avatar": "",
+      "username": "Amir Parvini",
+      "email": "rdnhrhrhr@gmail.com",
+      "mbtiType": "ENTP",
+      "isAuthenticated": false,
+      "phoneNumber": "08585858585",
+      "id": "1723497362820",
+      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
+      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
+    },
+    {
+      "avatar": "",
+      "username": "Amir Parvini",
+      "email": "amirparvini2000@gmail.com",
+      "mbtiType": "ENTJ",
+      "isAuthenticated": true,
+      "phoneNumber": "09922222222",
+      "id": "1724091472802",
       "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjcyODAyMDI4fQ.P1_rB3hJ5afwiG4TWXLq6jOAcVJkvQZ2Z-ZZOnQ1dZw",
       "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3Mjc2NjAyOCwiZXhwIjoxNjc0NDk0MDI4fQ.kCak9sLJr74frSRVQp0_27BY4iBCgQSmoT3vQVWKzJg"
     }
