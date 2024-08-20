@@ -88,8 +88,6 @@ export const VerifyStep : React.FC<userInfo> = ({userInfo,onComplete}) : JSX.Ele
                 
                 <FormInput ref={ref} title={SignUpInputsData.Title} placeHolderStr={SignUpInputsData.PlaceHolder} 
                     type={SignUpInputsData.Type}  onchange={formik.handleChange} formValue={formik.values.confirmCode} inputId={SignUpInputsData.Title}/>
-
-
                 {
                 formik.errors.confirmCode && formik.touched && <div className="verifyErrorTitleWrapper w-full flex justify-start px-4">
                     <h6 className='verifyErrorTitle text-red-600'>*{formik.errors.confirmCode}</h6>

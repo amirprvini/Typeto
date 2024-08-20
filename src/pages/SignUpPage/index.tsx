@@ -11,6 +11,7 @@ import { loginRequest, loginResponse } from "../../types/api.types";
 import toast from "react-hot-toast";
 import { tokensType } from "../../types/tokens.type";
 import { IUserState } from "../../components/context/types/context.types";
+import axios from "axios";
 
     enum SingUPPageSteps {
         InquiryStep = 0 , 
@@ -26,11 +27,26 @@ export const SignUpPage : React.FC = () : JSX.Element =>{
 
     const {user,setUser} = useContext(AppContext);
     const [step,setStep] = useState<SingUPPageSteps>(SingUPPageSteps.InquiryStep);
+    const [userID,setUserID] = useState<string>('');
     const [state,setState] = useState<IUserState>();
 
     const loginMutation = UseLoginMutation();
 
-    const handleAuthentication = (tokens:tokensType)=>{
+    const isAthenticated = async () =>{
+
+        // const users = await axios.get('http://localhost:3000/users/').then((res)=>res.data)
+        // console.log('users: ' , users);
+        // const userFound = users.find((user:IUserState)=>{
+        //     return user.phoneNumber === state?.phoneNumber
+        // })
+
+        // console.log('userFound: ' , userFound);
+
+        // userFound === undefined ? setUserID('') : setUserID(userFound.id)
+        
+    }
+
+    const handleAuthentication = async (tokens:tokensType)=>{
 
         // 1) save token in local storage
 
@@ -42,6 +58,18 @@ export const SignUpPage : React.FC = () : JSX.Element =>{
         // AXIOS.defaults.headers.common.Authorization = `Bearer ${tokens}`
 
         // 3) set user Info in context api
+
+
+        
+        const users = await axios.get('http://localhost:3000/users/').then((res)=>res.data)
+        console.log('users: ' , users);
+        const userFound = users.find((user:IUserState)=>{
+            return user.phoneNumber === state?.phoneNumber
+        })
+
+        console.log('userFound: ' , userFound);
+
+        if(userFound === undefined){
 
         setState({
                 avatar : '' , 
@@ -102,8 +130,42 @@ export const SignUpPage : React.FC = () : JSX.Element =>{
         })
 
 
+        }else{
+
+            const getUser = await axios.get(`http://localhost:3000/users/${userFound.id}`)
+            console.log('get User: ' , getUser.data); 
+            
+            
+        setState({
+                ...getUser.data ,
+                isAuthenticated:true,
+                ...tokens
+        })
+
+        setUser({
+                ...getUser.data ,
+                isAuthenticated:true,
+                ...tokens
+                })
 
 
+        localStorage.setItem("access",tokens.access);
+        localStorage.setItem("refresh",tokens.refresh);
+        localStorage.setItem("user",JSON.stringify({
+                ...getUser.data ,
+                isAuthenticated:true,
+                ...tokens
+            }));
+
+
+        await axios.put(`http://localhost:3000/users/${userFound.id}`,{
+                ...getUser.data ,
+                isAuthenticated:true,
+                ...tokens
+            })
+
+
+        }
 
     }
 

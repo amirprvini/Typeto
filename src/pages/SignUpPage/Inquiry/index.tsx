@@ -63,9 +63,9 @@ export const InquiryStep : React.FC<InquiryStepProps> = ({onNextStep,initialValu
         }
 
     return (
-        <div className="signUpPage"> 
+        <div className="signUpPage "> 
         
-        <div className="formContainer w-[90%] sm:w-3/5 lg:w-1/2 2xl:w-2/5 shadow-2xl">
+        <div className="formContainer w-[90%] sm:w-3/5 lg:w-2/5 2xl:w-2/5 shadow-2xl">
 
             <div className="signUpTitleWrapper">
                 <h2 className='title text-gray-400'>ثبت نام در تایپتو</h2>

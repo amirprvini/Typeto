@@ -1,6 +1,6 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef} from 'react';
 import { Profile } from '../../components/Profile';
-import { AddCommentSection, artistType } from '../../components/AddCommentSection';
+import { AddCommentSection} from '../../components/AddCommentSection';
 import { CommentList } from '../../components/CommentList';
 import { AppContext } from '../../components/context/store';
 import {useParams } from 'react-router-dom';
@@ -9,19 +9,16 @@ import CommentSectionModal from '../../components/Modals/CommentModal';
 import { createPortal } from 'react-dom';
 import ArtistSideBar from '../../components/Layout/ArtistSideBar';
 import { commentProps } from '../../components/context/types/comment.type';
-import axios, { Axios } from 'axios';
 
 interface ProfilePageProps {}
 
-
 export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
 
-    const [update , setUpdate] = useState<boolean>(false) ; 
+    const {updateComments,setUpdateComments} = useContext(AppContext) ; 
     
     const params = useParams() ; 
     const {user} = useContext(AppContext) ; 
-    const {data} = UseArtistQuery(params.id || ''); 
-
+    const {data} = UseArtistQuery(params.id || '');
     const ref = useRef<any>();
     const modalRef = useRef<any>();
 
@@ -31,32 +28,27 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
     }
 
     const handleClick = ()=>{
-        setUpdate(!update)
 
-        if((user === undefined) || (user.username === '' && user.mbtiType ==='')){
+        setUpdateComments(!updateComments)
+
+        if((user === undefined) || (user.phoneNumber === '')){
 
             modalRef.current.showModal();
         }
     }
 
-
-
-    const fetchArtists = async (artistId:string)=>{
-
-        const AllArtists = await axios.get("http://localhost:3000/artists") 
-        const findArtist = AllArtists.data.find((artist:artistType)=>{
-            return artistId === artist.id
-        })
-    }
-
-
     useEffect(()=>{
-        fetchArtists(params.id || '');
-    },[])
+
+        console.log('artist data: ' , data) ;
+
+    },[updateComments])
 
 
     return (
-        <div className="profilePage w-full flex justify-around space-x-2 px-2 lg:px-6" onLoad={handleScrolToTop}> 
+        <div className="profilePage w-full flex justify-around space-x-2 px-2 lg:px-6" onLoad={()=>{
+            setUpdateComments(!updateComments)
+            handleScrolToTop()
+        }}> 
 
         {createPortal(
         <CommentSectionModal ref={modalRef} />,
@@ -86,21 +78,20 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
 
                     <div className="titleContainer mb-5">
                         <div className="titleWrapper w-[50%]">
-                        <h1 className='title text-[1.5rem]'> دیدگاه کاربران </h1> </div>
+                        <h1 className='title text-[1.5rem] font-semibold'> دیدگاه کاربران </h1> </div>
                     </div>
 
                     <div className="addCommentSection mb-20">
                         <AddCommentSection artist={data!} user={user} onclick={handleClick} onComplete={(comment:commentProps,id:string)=>{
-                           fetchArtists(params.id || "");
-                        }}/>    
+                            console.log('2/// comment in on complete add cm section: ' , comment);
+                           setUpdateComments(!updateComments) }}/>    
                     </div>
 
                     <div className="commentListWrapper">
                         <CommentList artistId={data?.id || ''} 
                         comments={data?.comments.reverse()} 
-                        ref={ref} updateProp={update} onComplete={(cmID)=>{
-                            fetchArtists(params.id || "") 
-                            }}/>
+                        ref={ref} updateProp={updateComments} onComplete={(cmID)=>{
+                            console.log('cm Id in oncomplete list',cmID) }}/>
                     </div>
 
                 </div>
