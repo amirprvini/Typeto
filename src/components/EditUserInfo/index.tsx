@@ -6,8 +6,9 @@ import { editFormType } from '../../types/user.types';
 import ConfirmButton from '../ConfirmButton';
 import * as yup from 'yup' ; 
 import {useNavigate } from 'react-router-dom';
-import { UseConfirmUserMutaion } from '../services/mutaions/useConfirmMutatioin';
 import { AppContext } from '../context/store';
+import { IUserState } from '../context/types/context.types';
+let dropDownType : string ; 
 
 interface EditUSerInfoProps {
 
@@ -17,7 +18,7 @@ interface EditUSerInfoProps {
     mbtiType : string
   }
 
-  onComplete : (data:any)=> void 
+  onComplete : (user:IUserState,data:editFormType)=> void 
 
 } 
 
@@ -30,9 +31,17 @@ const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues,onComplete}) : 
 
   const [drpoState,setDropState] = useState<string>('') ;
   const {user,setUser} = useContext(AppContext) ;
-  const confirmMutate = UseConfirmUserMutaion(user?.id || '') 
-
+ 
   const navigate = useNavigate() ; 
+
+  const handleMbtiType = (type:string)=>{
+
+    setUser({
+      ...user,
+      mbtitType:type
+    })
+
+  }
 
   const formik = useFormik<editFormType>({
     initialValues : {
@@ -43,7 +52,7 @@ const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues,onComplete}) : 
 
     validationSchema , 
 
-    onSubmit: (data:any,{resetForm})=>{
+    onSubmit: (data:editFormType,{resetForm})=>{
 
     localStorage.setItem("access",user.access);
         localStorage.setItem("refresh",user.refresh);
@@ -52,7 +61,7 @@ const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues,onComplete}) : 
             avatar : '' , 
             username : data.username , 
             email : data.email , 
-            mbtiType : drpoState ,
+            mbtiType : user.mbtiType ,
             isAuthenticated: user.isAuthenticated ,
             phoneNumber: user.phoneNumber || '' ,
             id: user.id || '' ,   
@@ -61,13 +70,14 @@ const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues,onComplete}) : 
                 
             }));
 
-            handleConfirm(data) ; 
+            console.log('data: ' , data);
+            console.log('3- user in on Submit: ' , user);
 
       setTimeout(()=>{
         resetForm() ; 
     },3000) 
 
-    onComplete(data)
+    onComplete(user,data)
     navigate('/userProfile/') ; 
     window.scrollTo(0,0);
 
@@ -75,60 +85,7 @@ const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues,onComplete}) : 
 
   }) 
 
-  const handleConfirm = async (data:editFormType)=>{
-     
-    console.log('1- global user before set: ' , user)
-
-            setUser({
-              avatar : '' , 
-              username : data.username , 
-              email : data.email , 
-              mbtiType : drpoState ,
-              ...user
-            })
-
-            console.log('2- global user after set: ' , user)
-
-    confirmMutate.mutate({
-
-      avatar : '' , 
-      username : data.username , 
-      email : data.email , 
-      mbtiType : drpoState ,
-      isAuthenticated: user.isAuthenticated ,
-      phoneNumber: user.phoneNumber || '' ,
-      id: user.id || '' ,   
-      refresh : user.refresh || '' ,
-      access : user.access || '' 
-
-    })
-
-
-
-    // const Users = await axios.get(`/users/${user?.id}`);
-    // const getUser = Users.data.find((userObj:IUserState)=>{
-    //           return userObj.id === user.id
-    // })
-    // console.log('get user from json: ' , getUser); 
-
-
-    // await axios.put(`/users/${user?.id}`,{
-
-    //           avatar : '' , 
-    //           username : data.username , 
-    //           email : data.email , 
-    //           mbtiType : drpoState ,
-    //           ...user
-
-    //         });
-  
-
-
-
-          }
-
-
-  if(user?.username && user?.mbtiType && user?.isAuthenticated && user?.phoneNumber){
+  if(user?.username && user?.isAuthenticated && user?.phoneNumber){
 
       return <div className='editUserInfoWrapper w-full flex justify-center items-center'>
 
@@ -138,7 +95,16 @@ const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues,onComplete}) : 
               <TextInput placeHolderStr={user.email}  lable='ایمیل' type='email' onchange={formik.handleChange} inputValue={formik.values.email} inputId='email' bgColor='white' textColor='black' />
               
               <DropDown onCompleteDropDown={(type)=>{
-                setDropState(type) ; 
+                
+                console.log('1- mbti in onComp[before]: ' , user.mbtiType)
+                
+                setUser({
+                  ...user,
+                  mbtiType:type
+                })
+
+                console.log('2- mbti in onComp[after]: ' , user.mbtiType)
+
               }}  widthProp='3/5' justifyProp='start'/>
 
               <div className="confirmBtnWrapper mt-20">
@@ -170,7 +136,16 @@ const EditUserInfo:React.FC<EditUSerInfoProps> = ({initialValues,onComplete}) : 
               }
 
               <DropDown onCompleteDropDown={(type)=>{
-                setDropState(type) ; 
+
+                console.log('1- mbti in onComp[before]: ' , user.mbtiType)
+                setUser({
+                  ...user,
+                  mbtiType:type
+                })
+
+                console.log('2- mbti in onComp[after]: ' , user.mbtiType)
+
+                setDropState(type) ;
               }} />
 
               <div className="confirmBtnWrapper">

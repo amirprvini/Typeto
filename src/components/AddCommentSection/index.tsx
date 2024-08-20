@@ -85,7 +85,11 @@ export const AddCommentSection : React.FC<AddCommentSectionProps> = ({artist,use
                     mbtiType : user?.mbtiType || ''  
                 
                 };
+                
+                data.likedBy = [] ;
+                data.disLikedBy = [] ;
 
+                console.log('1/// comment in handle click in add cm: ' , data)
                 findArtist.comments.push(data)
                 onComplete(data,param.id || '')
                 

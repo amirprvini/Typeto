@@ -37,6 +37,10 @@ const FilterComments:React.FC<FilterCommentsProps> = ({commentCount=0 , onComple
             <button className="popular" onClick={()=>{onComplete(1)}}>محبوب ترین</button>
           </div>
 
+          <div className="popularWrapper">
+            <button className="popular" onClick={()=>{onComplete(2)}}>قدیمی ترین</button>
+          </div>
+
           {/* <select className="select bg-gray-300 select-ghost w-full max-w-xs">
               <option onClick={()=>{onComplete(0)}}>جدیدترین</option>
               <option onClick={()=>{onComplete(0)}}>محبوب ترین</option>

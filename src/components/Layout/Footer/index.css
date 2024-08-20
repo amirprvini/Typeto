@@ -1,55 +1,13 @@
 .footer{
-    width: 100%;
-    height: max-content;
     background-color: rgba(99, 110, 114,.3);
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-}
-
-
-.footerWrapper{
-    display: flex;
-    align-items: center;
-}
-
-
-.footerWrapper .right{
-    height: 80%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.socialMediasIcons{
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    font-size: 2.2rem;
-
-}
-
-
-.socialMediasTitle{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
 }
 
 .socialMediasTitle .title {
-
-    font-family: monospace;
-    font-size: clamp(.7rem,5vw,2rem);
-    color: white;
+    font-size: clamp(.7rem,3.5vw,1.8rem);    
 }
 
 
 .sendEmail{
-    width: 100%;
-    display: flex;
-    align-items: center;
     background-color: rgba(0, 206, 203, 0.2);
 }
 
@@ -60,82 +18,25 @@
 }
 
 .sendEmail input:focus {
-    
     border: none;
     outline: none;
-    
-}
-
-
-
-.sendEmail .emailIcon {
-    width: 60px;
-    height: 100%;
-    color: white;
-    font-size: 1.8rem;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .sendEmail .cnofirmButton{
-
-    width: 80px;
-    height: 100%;
-    color: white;
-    font-size: 1rem;
     background-color: rgba(0, 206, 203, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
-
-
-.topTopics{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-}
-
 
 .topTopicsTitle{
-    font-size: clamp(.7rem,5vw,2rem);
-    color: white;
+    font-size: clamp(.7rem,3.5vw,1.8rem);
 }
-
-
-
-
-.typetoFamily{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-}
-
 
 .typetoFamilyTitle{
-    font-size: clamp(.7rem,5vw,2rem);
-    color: white;
-}
-
-
-
-.topTopicsList{
-    width: 100%;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .85rem;
-    
-
+    font-size: clamp(.7rem,3.5vw,1.8rem);
 }
 
 .topTopicItem .farsiTitle{
     color: white;
-    font-size: clamp(.7rem,5vw,2rem);
+    font-size: clamp(.7rem,3.5vw,1.8rem);
 }
 
 

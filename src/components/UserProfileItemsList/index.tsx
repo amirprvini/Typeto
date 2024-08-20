@@ -6,25 +6,30 @@ import { FaUserEdit } from "react-icons/fa";
 import { RxExit } from "react-icons/rx";
 import UserAvatar from "../UserAvatar";
 import { useNavigate } from "react-router-dom";
-import { UseGetUserQuery } from "../services/queries/useGetUserQuery";
+import axios from "axios";
 
 
 interface UserProfileItemsListProps{
+    userID : string 
     setVal ?:(num:number)=>void ; 
 }
-export const UserProfileItemsList : React.FC<UserProfileItemsListProps> = ({setVal}) : JSX.Element =>{
+export const UserProfileItemsList : React.FC<UserProfileItemsListProps> = ({setVal,userID}) : JSX.Element =>{
 
-    const {user,setUser} = useContext(AppContext) ;
-    const {data} = UseGetUserQuery(user?.id || "") ;
+  const {loading,setLoading} = useContext(AppContext);
+  const [image,setImage] = useState<string>("./images/icons8-customer-90.png") ;    
+  const {user} = useContext(AppContext);
 
-    const [loading,setLoading] = useState<boolean>(false); 
-    useEffect(()=>{
-        console.log('get user from query: ' , data);
-    },[loading])
+  const handleUser = async ()=>{
     
+    const {data} = await axios.get(`http://localhost:3000/users/${userID}`);
+    console.log('user: ' , data);
+  }
 
-    const [image,setImage] = useState<string>("./images/icons8-customer-90.png") ; 
-     
+  useEffect(()=>{
+    
+    handleUser()
+
+  },[loading])
 
     const itemsBtnData = [
         {
@@ -59,17 +64,17 @@ export const UserProfileItemsList : React.FC<UserProfileItemsListProps> = ({setV
     }
 
 
-    return <div className="userProfileItemsListWrapper my-4 rounded-lg shadow-2xl" onLoad={()=>{setLoading(!loading)}}>
+    return <div className="userProfileItemsListWrapper my-4 rounded-lg shadow-2xl" onLoad={()=>setLoading(!loading)}>
         
         <div className="avatarWrapper">
-            <UserAvatar avatarUrl={image} />
+            <UserAvatar avatarUrl={'./images/icons8-customer-90.png'} />
         </div> 
         
 
         <div className="userPhoneNumberWrapper">
         
         <div className="userInfoContainer">
-            {data?.username ? <p className="userInfo">{data?.username}</p>:<p className="userInfo">{data?.phoneNumber || ''}</p> }
+            {user?.username ? <p className="userInfo">{user?.username}</p>:<p className="userInfo">{user?.phoneNumber || ''}</p> }
         </div>
 
         </div>
@@ -80,7 +85,12 @@ export const UserProfileItemsList : React.FC<UserProfileItemsListProps> = ({setV
 
                 {
                     itemsBtnData.map((item)=>{
-                        return <li className="w-full" key={item.slug}> <UserItemsButton icon={item.icon} title={item.title} onclick={()=>handleClick(item.slug)}/> </li>
+                        if(item.slug === 'editProfile')  
+                            return <li className="w-full" key={item.slug}> <UserItemsButton icon={item.icon} title={user?.username ? "ویرایش پروفایل کاربری":item.title} onclick={()=>handleClick(item.slug)}/> </li> 
+                    
+                        else
+                            return <li className="w-full" key={item.slug}> <UserItemsButton icon={item.icon} title={item.title} onclick={()=>handleClick(item.slug)}/> </li> 
+                     
                     })
                 }
                 

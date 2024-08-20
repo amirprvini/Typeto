@@ -9,9 +9,9 @@ const fetcher = async (id:string) : Promise<artistType> => {
 
 export const UseArtistQuery = (id:string )=> {
 
-   console.log("fetcher: " , fetcher(id)) ; 
     return useQuery<any,any,artistType,any>({
         queryKey: [ReactQueryKeys.GetArtists,id],
         queryFn: () => fetcher(id)
     }) ; 
+    
 };

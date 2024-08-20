@@ -1,6 +1,8 @@
+import { useContext } from 'react'
 import { LikeAndDislike } from '../Buttons/LikeAndDislike'
 import { UserProfilePhoto } from '../UserProfilePhoto'
 import './index.css'
+import { AppContext } from '../context/store'
 
 interface ICommentSectionProps {
     userName ?: string ,
@@ -31,7 +33,7 @@ export type commentType = {
 }
 
 
-export const CommentSection : React.FC<ICommentSectionProps> = ({userName,userType,userAvatar,
+export const CommentSection : React.FC<ICommentSectionProps> = ({userName='',userType,userAvatar,
     commentText,commentLike,commentDisLike,commentDate,commentID,likeOnComplete,disLikeOnComplete,likeBg,disLikeBg}):JSX.Element =>{
 
     const handleLikeButton = (num:number) : boolean =>{
@@ -48,6 +50,8 @@ export const CommentSection : React.FC<ICommentSectionProps> = ({userName,userTy
             return false 
     }
     
+    const {updateComments ,setUpdateComments} = useContext(AppContext) ; 
+
     return<div className="commentSection">
 
                     <div className="commentSectionHeader w-full flex justify-between">
@@ -68,7 +72,9 @@ export const CommentSection : React.FC<ICommentSectionProps> = ({userName,userTy
                             
                                 <div className="userNameWrapper">
                                     <h3 className="userName">
-                                        {userName}
+                                        {
+                                            userName?.length >= 1 ? userName : <span className='text-sm font-bold'>کاربر سایت</span>
+                                        }
                                     </h3>
                                 
                                 </div>
@@ -99,6 +105,7 @@ export const CommentSection : React.FC<ICommentSectionProps> = ({userName,userTy
 
                                 console.log("2- like state in comment section!!!!!!!!!!!!" , num)
                                 console.log("2- like state  in comment section bolllllllllll" , handleLikeButton(num))
+                                setUpdateComments(!updateComments);
                                 likeOnComplete(commentID);
                             
                             }}
@@ -107,6 +114,7 @@ export const CommentSection : React.FC<ICommentSectionProps> = ({userName,userTy
 
                                 console.log("2- like state in comment section!!!!!!!!!!!!" , num)
                                 console.log("2- like state  in comment section bolllllllllll" , handleDisLikeButton(num))
+                                setUpdateComments(!updateComments);
                                 disLikeOnComplete(commentID);
                             
                             }}
