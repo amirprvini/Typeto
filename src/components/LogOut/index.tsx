@@ -3,8 +3,9 @@ import ConfirmButton from '../ConfirmButton'
 import { AppContext } from '../context/store'
 import { useNavigate } from 'react-router-dom'
 import { UseConfirmUserMutaion } from '../services/mutaions/useConfirmMutatioin'
+import toast from 'react-hot-toast'
 
-const SignOut : React.FC = () : JSX.Element => {
+const LogOut : React.FC = () : JSX.Element => {
 
   const {user,setUser} = useContext(AppContext);
   const confirmMutate = UseConfirmUserMutaion(user?.id || '')
@@ -46,14 +47,15 @@ const SignOut : React.FC = () : JSX.Element => {
 
 
 
+        toast.success('شما با موفقیت از حساب کاربری خود خارج شدید.',{duration:5000})
         navigate('/home');
 
     }
 
-  return <div className='signOutWrapper h-[350px] w-full flex justify-center items-center'>
+  return <div className='LogOutWrapper h-[350px] w-full flex justify-center items-center'>
 
-      <div className="signOutMessageWrapper flex flex-col items-center justify-around h-3/5 w-[90%] sm:w-1/2 2xl:w-2/5 shadow-2xl px-8 py-4 bg-white rounded-2xl text-black text-lg font-semibold">
-          <p className="signOutMessage flex justify-center flex-wrap">
+      <div className="LogOutMessageWrapper flex flex-col items-center justify-around h-3/5 w-[90%] sm:w-1/2 2xl:w-2/5 shadow-2xl px-8 py-4 bg-white rounded-2xl text-black text-lg font-semibold">
+          <p className="LogOutMessage flex justify-center flex-wrap">
               آیا برای خروج از حساب کاربری خود اطمینان دارید؟
           </p>
     
@@ -66,4 +68,4 @@ const SignOut : React.FC = () : JSX.Element => {
     </div>
 }
 
-export default SignOut
+export default LogOut

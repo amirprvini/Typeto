@@ -31,7 +31,7 @@ const SearchResults : React.FC<SearchResultsProps> = ({artistsList,setInpState,d
         return <div className={`searchResultsWrapper w-[85%] bg-black max-h-60 
         overflow-y-scroll absolute top-0 flex justify-center rounded-sm z-10 ${displayProp}`} onMouseDown={handleMouseDown}>
         
-        <ul className='resultsList'>
+        <ul className='resultsList w-full flex flex-col items-center gap-y-3'>
             {artistsList.map((artist:artistType)=>{
                 return <li key={artist.id}>
                     <FamePeopleCard charName={artist.name} charType={artist.type} career={artist.career} 

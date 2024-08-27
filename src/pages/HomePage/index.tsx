@@ -1,4 +1,4 @@
-import { useContext,useEffect,useState } from 'react'
+import { useContext,useEffect} from 'react'
 import QuestionBox from '../../components/QuestionBox'
 import './index.css'
 import {QAData} from './Q_AData'
@@ -159,10 +159,7 @@ export const HomePage : React.FC = () : JSX.Element =>{
 
             </div>
         
-
-        
-        </div>
-
+          </div>
 
 
         <div className="qListWrappwe">

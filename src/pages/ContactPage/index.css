@@ -13,7 +13,7 @@
 
 
 .contactPage .formContainer {
-    height: max-content;
+    height: 70vh;
     padding: .8rem .1rem ;
     background-color: black;
     border: 2px solid rgba(0, 206, 203, 0.3);

@@ -28,152 +28,15 @@ const ArtistSideBar : React.FC<ArtistSideBarProps> = ({cardScale=100}) : JSX.Ele
         }
     })
   const navigate = useNavigate();
+  const navigateArtist = useNavigate() ;
   const handleClick = ()=>{
         navigate(`/famepeopletypes/${data?.type}`) ; 
         window.scrollTo(0,0);
   }
 
-  var settings = {
-    // dots: true,
-    infinite: true,
-    // slidesToShow: 3,
-    // slidesToScroll: 1,
-    slidesToShow: 1,
-    slidesToScroll: 2,
-    initialSlide: 0,
-    // autoplay: true,
-    // autoplaySpeed: 4000,
-    pauseOnHover: true,
-    // centerMode: true,
-    // centerPadding: "60px",
-    // swipeToSlide: true,
-    // rtl: true ,
-     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          // infinite: true,
-          // dots: true,
-          centerMode: false,
-        }
-      },
-      {
-        breakpoint: 700,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-        }
-      }
-      ,
-      // {
-      //   breakpoint: 585,
-      //   settings: {
-      //     slidesToShow: 2,
-      //     slidesToScroll: 1,
-      //     centerMode: false,
-      //   }
-      // }
-      // ,
-      {
-        breakpoint: 425,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-        }
-      }
-    ]
-  };
-
-   const personalityTypes =  [
-    {
-      "title": "INFP",
-      "typeDescription":"ایده آل گرا",
-      "id": "0cbb"
-    },
-    {
-      "title": "INTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "0b05"
-    },
-    {
-      "title": "INTJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "a388"
-    },
-    {
-      "title": "INFJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "073d"
-    },
-    {
-      "title": "ENTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "b3a4"
-    },
-    {
-      "title": "ENFP",
-      "typeDescription":"ایده آل گرا",
-      "id": "07e3"
-    },
-    {
-      "title": "ISTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "5a8a"
-    },
-    {
-      "title": "ISFP",
-      "typeDescription":"ایده آل گرا",
-      "id": "815c"
-    },
-    {
-      "title": "ENTJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "4f6d"
-    },
-    {
-      "title": "ENFJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "9967"
-    },
-    {
-      "title": "ISTJ",
-      "typeDescription":"ایده آل گرا",
-      "id": "417b"
-    },
-    {
-      "title": "ESTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "2b28"
-    },
-    {
-      "title": "ESTP",
-      "typeDescription":"ایده آل گرا",
-      "id": "c6c9"
-    },
-    {
-      "title": "ESFP",
-      "typeDescription":"ایده آل گرا",
-      "id": "8269"
-    },
-    {
-      "title": "ESEI",
-      "typeDescription":"ایده آل گرا",
-      "id": "2094"
-    },
-    {
-      "title": "ESTI",
-      "typeDescription":"ایده آل گرا",
-      "id": "04f3"
-    }
-  ] ;
-
-          const mbtiType = personalityTypes.map((type)=>{
-                        return <MBTICard typeTitle={type.title} faTitle={type.typeDescription} />
-                        })
+  const handleArtistCard = (artistID:string)=>{
+      navigateArtist(`/profile/${artistID}`)
+  }
 
   return (
     <div className="artistSideBar rounded shadow-2xl">
@@ -188,7 +51,7 @@ const ArtistSideBar : React.FC<ArtistSideBarProps> = ({cardScale=100}) : JSX.Ele
                     return <li key={artist.id}> 
                     <RelativeProfileCard charName={artist.name} charType={artist.type}
                         career={artist.career} charProfileUrl={artist.photoUrl} 
-                        id={artist.id} scaleProp={cardScale}/> </li>
+                        id={artist.id} scaleProp={cardScale} onclick={()=>{handleArtistCard(artist.id)}}/> </li>
                 })}
             </ul>
 

@@ -8,6 +8,7 @@ import { tokensType } from '../../../types/tokens.type';
 import { IUserState } from '../../../components/context/types/context.types';
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 
  const SignUpInputsData = {
@@ -50,11 +51,16 @@ export const VerifyStep : React.FC<userInfo> = ({userInfo,onComplete}) : JSX.Ele
                 
             onComplete(tokens);
 
+            toast.success('شما با موفقیت وارد شدید');
+            
             handleClick();
 
             setTimeout(()=>{
             resetForm();
             },300)
+
+
+            window.scrollTo(0,0);
     
             
         },

@@ -180,7 +180,27 @@
       "type": "INTJ",
       "bioGraphy": "کیمیا روانگر با نام مستعار میا پلیز متولد ۶ نوامبر سال ۱۹۹۲ و معادل ۱۵ ابان ۱۳۷۱ است . او در کنکور سال ۱۳۹۰ رتبه ی دو آورد و در سال ۱۳۹۵ لیسانس طراحی صنعتی گرفت و این رشته را دوست نداشت تا وقتی که به کمک این رشته توانست محصولات خود را با نام کوکورو در سال ۱۳۹۷ درست کند .",
       "photoUrl": "https://static1.personality-database.com/profile_images/c157110dea804f1baac0da4497ef2982.png",
-      "comments": [],
+      "comments": [
+        {
+          "id": 1724752404498,
+          "date": "۱۴۰۳/۶/۶",
+          "commentText": "11111111111",
+          "artistId": "3",
+          "user": {
+            "id": "",
+            "phoneNumber": "",
+            "access": "",
+            "refresh": "",
+            "avatar": "",
+            "username": "",
+            "email": "",
+            "isAuthenticated": false,
+            "mbtiType": ""
+          },
+          "likedBy": [],
+          "disLikedBy": []
+        }
+      ],
       "id": "3"
     },
     {

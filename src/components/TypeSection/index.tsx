@@ -66,8 +66,8 @@ const TypeSection : React.FC<typeSecProp> = ({typeSectionTitle,types}) : JSX.Ele
 
     return <div className="typeSection w-4/5">
 
-        <div className="typeSecTitleWrapper text-[3rem]">
-            <h3 className="typeSecTitle">{typeSectionTitle}</h3>
+        <div className="typeSecTitleWrapper text-lg sm:text-2xl lg:text-3xl">
+            <h3 className="typeSecTitle font-iranyekan">{typeSectionTitle}</h3>
         </div>
         
 

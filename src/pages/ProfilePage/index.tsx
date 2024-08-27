@@ -78,7 +78,7 @@ export const ProfilePage : React.FC<ProfilePageProps>=():JSX.Element =>{
 
                     <div className="titleContainer mb-5">
                         <div className="titleWrapper w-[50%]">
-                        <h1 className='title text-[1.5rem] font-semibold'> دیدگاه کاربران </h1> </div>
+                        <h1 className='title text-[1.5rem] font-semibold font-iranian-sans'> دیدگاه کاربران </h1> </div>
                     </div>
 
                     <div className="addCommentSection mb-20">

@@ -100,7 +100,7 @@ export const AddCommentSection : React.FC<AddCommentSectionProps> = ({artist,use
     return <div className="addCommentWrapper">
             
             <div className="commentTitleWrapper">
-                <h3 className="addCommentTitle">
+                <h3 className="addCommentTitle font-iranyekan">
                     افزودن دیدگاه
                 </h3>
             </div>

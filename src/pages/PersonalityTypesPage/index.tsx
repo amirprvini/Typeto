@@ -1,12 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { SideBar } from '../../components/Layout/SideBar';
-import PersonalityTypesCard from '../../components/PersonalityTypesCard';
-import './index.css' ;
-import {personalityTypes} from './PersonalityTypesData'
-import { AXIOS } from '../../config/axios.config';
-import { API_URLS } from '../../constants/api.urls';
-import { useContext, useEffect, useState } from 'react';
+import {useNavigate } from 'react-router-dom';
 import MBTICard from '../../components/MBTICard';
+import { analystsTypes, diplomatsTypes, explorersTypes, SentinelsTypes } from '../../components/TypeSection/typeSecData';
 
 
 
@@ -120,31 +114,104 @@ const PersonalityTypesPage : React.FC = () : JSX.Element =>{
   }
 
 
-    return <div className="personalityTypesPage">
+    return <div className="personalityTypesPage w-3/4">
         
         
-        <div className="content w-full"> PERSONALITY TYPES
+        <div className="content w-full">
 
-            <div className="typesListWrappwe">
 
-                <div className="titleContainer mb-5"> <div className="titleWrapper"> <h1 className='title'>انواع تایپ های شخصیتی</h1> </div> </div>
+                <div className="titleContainer mb-5 "> <div className="titleWrapper w-max"> <h1 className='title'>انواع تایپ های شخصیتی</h1> </div> </div>
             
-            <ul className="typesList w-full flex ">
+            <div className="typesListWrapper w-full flex flex-col gap-6">
                 
-            {mbtiTypes.map((type)=>{
+            <div className="analystsTypesWrapper">
+
+                <div className="analystsTitleWrapper text-white font-mono text-3xl px-10 py-5">
+                    <h3 className="analystsTitle">
+                        تحلیلگران
+                    </h3>
+                </div>
+
+                <ul className="typesList w-full flex text-white">
+            
+                {analystsTypes.map((type)=>{
                     return <MBTICard typeTitle={type.type} faTitle={type.faTitle} description={type.description}
-                    imgUrl={type.url} widthProp={'[75%]'} onclick={()=>{
+                    imgUrl={type.url} widthProp={'[25%]'} onclick={()=>{
                         handleClick(type.type)
                     }}/>
                         })}
 
-            </ul>
+                </ul>
+
+            </div>
+
+            <div className="diplomatsTypesWrapper">
+
+                <div className="analystsTitleWrapper text-white font-mono text-3xl px-10 py-5">
+                    <h3 className="analystsTitle">
+                        دیپلمات
+                    </h3>
+                </div>
+
+                <ul className="typesList w-full flex text-white">
+            
+                {diplomatsTypes.map((type)=>{
+                    return <MBTICard typeTitle={type.type} faTitle={type.faTitle} description={type.description}
+                    imgUrl={type.url} widthProp={'[25%]'} onclick={()=>{
+                        handleClick(type.type)
+                    }}/>
+                        })}
+
+                </ul>
+
+            </div>
+
+            <div className="analystsTypesWrapper">
+
+                <div className="analystsTitleWrapper text-white font-mono text-3xl px-10 py-5">
+                    <h3 className="analystsTitle">
+                        نگهبانان
+                    </h3>
+                </div>
+
+                <ul className="typesList w-full flex text-white">
+            
+                {SentinelsTypes.map((type)=>{
+                    return <MBTICard typeTitle={type.type} faTitle={type.faTitle} description={type.description}
+                    imgUrl={type.url} widthProp={'[30%]'} onclick={()=>{
+                        handleClick(type.type)
+                    }}/>
+                        })}
+
+                </ul>
+
+            </div>
+
+            <div className="analystsTypesWrapper">
+
+                <div className="analystsTitleWrapper text-white font-mono text-3xl px-10 py-5">
+                    <h3 className="analystsTitle">
+                        کاشفان
+                    </h3>
+                </div>
+
+                <ul className="typesList w-full flex text-white">
+            
+                {explorersTypes.map((type)=>{
+                    return <MBTICard typeTitle={type.type} faTitle={type.faTitle} description={type.description}
+                    imgUrl={type.url} widthProp={'[25%]'} onclick={()=>{
+                        handleClick(type.type)
+                    }}/>
+                        })}
+
+                </ul>
+
+            </div>
 
             </div>
         
         </div>
     
-        {/* <div className="SideBar"> <SideBar/> </div> */}
 
     </div>
 

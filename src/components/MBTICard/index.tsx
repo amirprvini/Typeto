@@ -10,8 +10,7 @@ interface IMBTICard {
     onclick ?: ()=> void 
 }
 
-const MBTICard : React.FC<IMBTICard> = ({typeTitle,faTitle,description,
-    imgUrl,onclick,widthProp='[93%]'}) : JSX.Element =>{
+const MBTICard : React.FC<IMBTICard> = ({typeTitle,description,onclick,widthProp='[93%]'}) : JSX.Element =>{
    
     return ( 
         <div className={`mbtiCard w-${widthProp} mr-1 cursor-pointer flex flex-col justify-start space-y-5 px-4 py-2`} onClick={onclick}>

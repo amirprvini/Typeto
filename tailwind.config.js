@@ -6,6 +6,19 @@ module.exports = {
   theme: {
 
     extend: {},
+
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui'],
+      'serif': ['ui-serif', 'Georgia'],
+      'mono': ['ui-monospace', 'SFMono-Regular',],
+      'display': ['Oswald'],
+      'body': ['"Open Sans"'],
+      'Poppins' : ["Poppins" , "sans"],
+      'iranian-sans' : ["iranian-sans","sans"] ,
+      'iranyekan' : ["iranyekan","serif"]
+
+    },
+    
     // colors: {
     //   // Configure your color palette here
 

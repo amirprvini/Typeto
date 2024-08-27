@@ -10,7 +10,7 @@ interface FilterCommentsProps {
 const FilterComments:React.FC<FilterCommentsProps> = ({commentCount=0 , onComplete}) : JSX.Element => {
   return (
       <div className="filterCommentsBox bg-gray-300 shadow-2xl rounded-lg py-1 px-2
-      flex justify-between font-bold">
+      flex justify-between font-bold font-iranyekan">
 
       <div className="filterWrapper flex space-x-1 items-center h-full pl-3">
 

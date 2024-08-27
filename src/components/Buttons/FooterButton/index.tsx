@@ -9,7 +9,7 @@ interface FooterButtonProps {
 
 const FooterButton : React.FC<FooterButtonProps> = ({faTitle,onClickFunction}) : JSX.Element =>{
     return (
-    <button className="footerBtn" onClick={onClickFunction}> {faTitle} </button> 
+    <button className="footerBtn text-right" onClick={onClickFunction}> {faTitle} </button> 
 )
 
 

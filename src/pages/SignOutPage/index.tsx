@@ -1,12 +1,13 @@
 import React from 'react'
-import SignOut from '../../components/SignOut'
+import LogOut from '../../components/LogOut'
 
-interface SignOutPageProps {}
 
-const SignOutPage : React.FC<SignOutPageProps> = ():JSX.Element => {
+interface LogOutPageProps {}
+
+const SignOutPage : React.FC<LogOutPageProps> = ():JSX.Element => {
   return <div className="userProfilePage w-[90%] sm:w-3/4 lg:w-2/5 bg-black text-white text-7xl flex justify-center"> 
     
-        <div className="signOutPageWrapper w-3/4 my-4 "> <SignOut/> </div>
+        <div className="signOutPageWrapper w-3/4 my-4 "> <LogOut/> </div>
     
     </div>
 }

@@ -2,9 +2,7 @@ import "./index.css"
 import { FaInstagram } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import FormInput from "../../Inputs/FormInput";
-import {Link, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import FooterButton from "../../Buttons/FooterButton";
 
 interface IFooterProps  {}
@@ -39,11 +37,11 @@ const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
 
         <div className="footerWrapper w-[95%] flex sm:w-[90%] lg:w-4/5 flex-col sm:flex-row justify-between items-center">
 
-            <div className="topTopics w-1/3 flex flex-col h-full">
+            <div className="topTopics w-1/3 flex flex-col items-center h-full">
 
-                <p className="topTopicsTitle text-white font-mono ">شاخه های برتر</p>
+                <p className="topTopicsTitle text-white font-iranyekan">شاخه های برتر</p>
 
-                <ul className="topTopicsList mt-4">
+                <ul className="topTopicsList w-full flex flex-col items-center mt-4">
 
                     {TopTopicsData.map((data)=>{
                         return <li className="topTopicItem space-y-4"> <FooterButton faTitle={data.FaTitle} onClickFunction={()=>{handleFooerBtn(data.EnTitle.toLowerCase().split(" ").join(""))}} /> </li>
@@ -54,11 +52,11 @@ const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
             
             </div>
             
-            <div className="typetoFamily w-1/3 flex flex-col h-full">
+            <div className="typetoFamily w-1/3 flex flex-col items-center h-full">
             
-                <p className="typetoFamilyTitle text-white font-mono ">خانواده تایپتو</p>
+                <p className="typetoFamilyTitle text-white font-iranyekan">خانواده تایپتو</p>
 
-                <ul className="topTopicsList w-full flex flex-col items-start gap-3 mt-4">
+                <ul className="topTopicsList w-full text-right flex flex-col items-center gap-3 mt-4">
 
                     {typetoFamData.map((data)=>{
                         return <li className="typetoFamItem space-y-4" key={data.EnTitle}> <FooterButton faTitle={data.FaTitle} onClickFunction={()=>{handleFooerBtn(data.EnTitle.toLowerCase().split(" ").join(""))}}/> </li>
@@ -73,11 +71,11 @@ const Footer : React.FC<IFooterProps>  = () : JSX.Element =>{
 
                 <div className="socialMediasTitle w-full flex justify-center">
 
-                <p className="title font-mono text-white ">همراه ما باشید!</p>
+                <p className="title font-iranyekan text-white ">همراه ما باشید!</p>
 
                 </div>
 
-                <div className="socialMediasIcons w-full text-white flex justify-center gap-6 text-4xl mt-6">
+                <div className="socialMediasIcons w-full text-gray-400 flex justify-center gap-6 text-4xl mt-6">
 
                     <button className="instagram cursor-pointer hover:text-red-500 "> <FaInstagram /> </button>
                     <button className="telegram cursor-pointer hover:text-blue-500 "> <FaTelegram /> </button>

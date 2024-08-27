@@ -13,7 +13,7 @@ import TypesInfoPage from '../pages/TypesInfoPage'
 import { UserProfile } from '../components/Buttons/UserProfile'
 import UserProfilePage from '../pages/UserProfilePage'
 import EditUserProfilePage from '../pages/EditUserProfilePage'
-import SignOut from '../components/SignOut'
+import SignOut from '../components/LogOut'
 
 interface IRouteProvider {}
 

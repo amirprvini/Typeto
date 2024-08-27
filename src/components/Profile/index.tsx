@@ -47,7 +47,7 @@ export const Profile : React.FC<IProfileProps> = (props) : JSX.Element =>{
 
 
                     <div className="profileBiographyWrapper">
-                        <p className="profileBiography h-min">
+                        <p className="profileBiography h-min font-iranyekan">
                             {props.profileBioGraphy}
                         </p>
                     </div>

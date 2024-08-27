@@ -5,6 +5,7 @@ import { QueryClientStore } from './components/services/queryClientStore';
 import { ContextProvider } from './components/context/store';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { Toaster } from 'react-hot-toast';
 // import { AppProvider } from './context/store';
 
 
@@ -14,6 +15,7 @@ function App() {
     <QueryClientProvider client={QueryClientStore}>
       <ContextProvider>
         {/* <ProviderOfContext> */}
+          <Toaster />
           <RouteProvider />
         {/* </ProviderOfContext> */}
       </ContextProvider>

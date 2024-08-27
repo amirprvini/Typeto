@@ -85,7 +85,7 @@ const NavBar : React.FC<NavBarProps> = ({isAthenticated = true}) : JSX.Element =
 
 
   return (
-    <nav className="navBar">
+    <nav className="navBar font-iranyekan">
 
         <div className='burgerButton' onClick={handleburgurClick}> <GiHamburgerMenu />
         

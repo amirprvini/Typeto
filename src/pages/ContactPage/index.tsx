@@ -28,7 +28,7 @@ const ContactInputsData = [
 
     return (<div className="contactPage"> 
         
-        <div className="formContainer w-[95%] sm:w-4/5 lg:w-3/4 shadow-2xl">
+        <div className="formContainer w-[95%] sm:w-3/4 lg:w-1/2 shadow-2xl">
 
             <div className="contactPageTitleWrapper">
                 <h2 className='title text-gray-300'>تماس با ما</h2>
