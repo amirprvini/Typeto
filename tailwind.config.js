@@ -5,7 +5,14 @@ module.exports = {
   ],
   theme: {
 
-    extend: {},
+    extend: {
+
+      colors: {
+        'regal-blue': '#243c5a',
+        'primary': '#49aaa805' ,
+      },
+      
+    },
 
     fontFamily: {
       'sans': ['ui-sans-serif', 'system-ui'],
@@ -15,20 +22,9 @@ module.exports = {
       'body': ['"Open Sans"'],
       'Poppins' : ["Poppins" , "sans"],
       'iranian-sans' : ["iranian-sans","sans"] ,
-      'iranyekan' : ["iranyekan","serif"]
-
+      'iranyekan' : ["iranyekan","serif"],
+      'dana' : ["dana","sans"] ,
     },
-    
-    // colors: {
-    //   // Configure your color palette here
-
-    //   'typetoColor':{
-    //     100 : '#00cecb80',
-    //     200 : '#00cecb33',
-    //   },
-      
-
-    // } ,
     
     screens: {
       'sm': '640px',
