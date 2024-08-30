@@ -1,6 +1,5 @@
 import { useContext,useEffect} from 'react'
 import QuestionBox from '../../components/QuestionBox'
-import './index.css'
 import {QAData} from './Q_AData'
 import MoreButton from '../../components/Buttons/MoreButton'
 import { Link, useNavigate } from 'react-router-dom'
@@ -117,21 +116,21 @@ export const HomePage : React.FC = () : JSX.Element =>{
                         handleButtons() ; 
 
     return (
-        <div className="homePage">
+        <div className="homePage w-full bg-black text-white text-7xl flex justify-center items-start">
         
-        <div className="content"> 
+        <div className="content w-full bg-primary py-4 px-2 flex flex-col gap-8 items-center justify-center"> 
 
-        <div className="showFamePeople"> 
+        <div className="showFamePeople w-full flex flex-col justify-center items-center"> 
 
 
             <div className="titleContainer mb-1 w-[100%] sm:w-[90%]">
-                 <div className="titleWrapper py-2 w-[100%] text-6xl sm:w-2/3 lg:w-1/3"> <h2 className='title flex flex-wrap'>افراد معروف</h2> </div> </div>
+                 <div className="titleWrapper py-2 w-[100%] text-6xl sm:w-2/3 lg:w-1/3"> <h2 className='title flex flex-wrap font-iranyekan'>افراد معروف</h2> </div> </div>
             
-            <div className="famePeopleWrapper">
+            <div className="famePeopleWrapper w-[90%] bg-black rounded-2xl py-4 px-2">
 
                 <Slider {...settings}> {Artist} </Slider>
 
-                <div className="moreButtonWrapper">
+                <div className="moreButtonWrapper w-full flex justify-end text-xl mt-8 mb-4 px-4">
                     <Link to={"/famouspeople"}> <MoreButton /></Link>
                 </div>
 
@@ -143,14 +142,14 @@ export const HomePage : React.FC = () : JSX.Element =>{
 
 
 
-        <div className="showTypes"> 
+        <div className="showTypes w-[90%] flex flex-col justify-center items-center"> 
 
 
             <div className="titleContainer mb-10 w-[100%] sm:w-[90%]">
               <div className="titleWrapper py-2 text-6xl sm:w-2/3 lg:w-1/3"> <h2 className='title w-max flex flex-wrap'>تایپ های شخصیتی</h2> </div>    
             </div>
             
-            <div className="typesWrapper flex flex-col items-center">
+            <div className="typesWrapper flex flex-col items-center w-full bg-black rounded-2xl py-4 px-2">
 
                 <TypeSection typeSectionTitle='تحلیلگران' types={analystsTypes} />
                 <TypeSection typeSectionTitle='دیپلمات' types={diplomatsTypes} />
@@ -162,10 +161,10 @@ export const HomePage : React.FC = () : JSX.Element =>{
           </div>
 
 
-        <div className="qListWrappwe">
+        <div className="qListWrapper w-[90%]">
 
-            <div className="titleContainer mb-10 w-[90%]"> <div className="titleWrapper"> <h2 className='title w-max'>پرسش و پاسخ</h2> </div> </div>
-            <ul className="questionList">
+            <div className="titleContainer mb-10 w-[90%]"> <div className="titleWrapper w-2/5"> <h2 className='title w-max'>پرسش و پاسخ</h2> </div> </div>
+            <ul className="questionList flex flex-col gap-4">
                 
            {QAData.map((data)=>{
 
